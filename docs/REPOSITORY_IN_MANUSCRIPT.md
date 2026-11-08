@@ -1,21 +1,13 @@
-# Manuscript repository-link insertion — verification gate
+# Repository provenance cited in the author manuscript
 
-**Current state:** The public GitHub repository exists at https://github.com/shaikhamalkawi-ux/mssp-decision-evidence-audit.
-The manuscript link must be updated **only after** the uploaded commit has been
-read back and the source-free tests have been checked at that commit.
+The V17 *Systems* author-review manuscript contains a clickable GitHub URL and
+cites the source-free code-and-derived-evidence snapshot at commit
+`bf29b48d798bc179d69ddd3853e6866a2013011e`. This fixes the publicly checkable evidence snapshot independently
+of any later editorial PDF updates.
 
-Once a real publicly accessible repository is confirmed, replace the current
-MDPI `\\dataavailability{...}` statement with a version-locked paragraph:
+Repo: https://github.com/shaikhamalkawi-ux/mssp-decision-evidence-audit
 
-> A source-free reproducibility capsule containing de-identified derived inputs,
-> a claim-decision casebook, deterministic validation scripts, and regression
-> tests is publicly available at [VERIFIED_REPO_URL], commit [VERIFIED_COMMIT].
-> The original confidential company XLSX/PDF records, original-source hashes
-> and owner-side source-reconstruction materials are not publicly distributed.
-> Accordingly, the repository reproduces the selected derived numerical and
-> logical witnesses, but cannot provide full raw-source-to-manuscript replication
-> or validate operational service deployment. Requests for restricted source
-> materials require the data owner's separate approval.
-
-Do not populate `[VERIFIED_REPO_URL]` from a planned repository name alone, and
-do not invent a DOI. Check the release license before offering unrestricted reuse.
+The author-reviewed manuscript is not yet submitted, accepted, assigned a journal
+DOI or licensed for redistribution. The public repository excludes original
+company spreadsheets, reports, raw financial amounts and owner-side replay.
+It supports only the defined source-free tests, not full original-record replication.

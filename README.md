@@ -6,7 +6,7 @@ Supporting material for the author manuscript:
 
 **Identifiability Before MSSP Portfolio Decisions: A Source-Locked Industrial Audit of Priority Scores, Launch Stages, and Financial Aggregates**
 
-Authors: **Muhammad Emran** and **Ghassan Malkawi**. The manuscript is being prepared
+Authors: **Muhammad Emran** and **Ghassan Malkawi**. The linked author-review manuscript (V17) is being prepared
 for *Systems* (MDPI) and is **not yet published or assigned a journal DOI**.
 
 This repository is intended to support examination of the claims in a prospective
@@ -61,7 +61,11 @@ chosen diagnostic weights, not elicited or company-approved priorities.
 ## Publication and citation
 
 The manuscript PDF is an author-review copy; neither journal acceptance nor a
-DOI is implied. `CITATION.cff` identifies the software material, but final
+DOI is implied. The manuscript Data Availability Statement points to the immutable derived-code
+snapshot commit `bf29b48d798bc179d69ddd3853e6866a2013011e`. The current document file may be updated
+without changing that source-code snapshot.
+
+`CITATION.cff` identifies the software material, but final
 journal metadata, license, author declarations and rights-clearance remain to
 be confirmed. Repository visibility is not evidence that restricted original
 company data can be redistributed.
