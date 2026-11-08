@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/shaikhamalkawi-ux/mssp-decision-evidence-audit/main/schemas/claim_evidence_record_v1.schema.json",
+  "title": "Illustrative claim-conditioned audit record v1",
+  "type": "object",
+  "required": [
+    "claim_id",
+    "question",
+    "origin",
+    "intended_use",
+    "source_scope",
+    "admission",
+    "finding",
+    "limitations"
+  ],
+  "properties": {
+    "claim_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "origin": {
+      "type": "string",
+      "enum": [
+        "source_explicit",
+        "source_derived",
+        "researcher_query"
+      ]
+    },
+    "intended_use": {
+      "type": "string",
+      "enum": [
+        "explicit_in_source",
+        "owner_confirmed",
+        "not_confirmed",
+        "not_applicable"
+      ]
+    },
+    "source_scope": {
+      "type": "object",
+      "required": [
+        "source_version",
+        "unit",
+        "time_boundary"
+      ],
+      "properties": {
+        "source_version": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "time_boundary": {
+          "type": "string"
+        },
+        "evidence_role": {
+          "type": "string"
+        }
+      }
+    },
+    "admission": {
+      "type": "object",
+      "required": [
+        "status",
+        "reason"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "admitted",
+            "hold_scope",
+            "hold_authority",
+            "hold_unavailable"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        },
+        "reviewer_id": {
+          "type": "string"
+        }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "required": [
+        "status",
+        "reason"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "identified",
+            "source_conflict",
+            "not_identified",
+            "outcome_absent",
+            "not_evaluated"
+          ]
+        },
+        "value": {},
+        "bounds": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number"
+          }
+        },
+        "reason": {
+          "type": "string"
+        },
+        "witness": {
+          "type": "string"
+        }
+      }
+    },
+    "needed_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "adjudication": {
+      "type": "object",
+      "properties": {
+        "reviewed": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "limitations": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

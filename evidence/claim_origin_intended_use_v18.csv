@@ -1,0 +1,11 @@
+claim_id,requested_query,origin_gate,source_basis,managerial_use_confirmed,why_not_attributed_to_company,needs
+C3,51 capabilities mapped to 25 packages,SOURCE_DERIVED,S4/S9 exact-name membership,NO,An analyst count is not a signed management assertion,none for source-membership statement
+C2,49 versus 51 count equivalence,SOURCE_EXPLICIT_AND_SOURCE_DERIVED,"49 helper/narrative S4,S7,S8 vs 51 enumerated S4",NO,same intended definition is unconfirmed,approved dictionary and scope reconciliation
+C4,Full component predicate follows package label,RESEARCHER_QUERY,S4/S9 profiles and labels,NO,g_strict was explicitly introduced for information-loss demonstration,approved full-scope/acceptance meaning if used for a launch
+C5,Unique numerical top priority from matrix,RESEARCHER_QUERY,S4 scores; S5/S6 Firewall narrative,NO,weighted sum rule not company-approved,weights/aggregation/tie rule and authorized decision
+C6,All mapped components available in advertised package year,RESEARCHER_QUERY,S4/S9 detailed/aggregate years,NO,all-components-at-launch assumption introduced analytically,versioned launch tiers and scope
+C7,Later roadmap milestone denotes delayed first full-scope launch,RESEARCHER_QUERY,S5/S6 milestone language,NO,milestone may be expansion,author-approved tier scope and dates
+C8,Individual service revenue recoverable from family totals,RESEARCHER_QUERY,S4/S6 family-year model,NO,additive service allocation explicitly hypothetical,lawfully shareable allocation rule or actual service contracts
+C9,Selected post-resource planning convention,SOURCE_EXPLICIT,S6 narrative and S4 competing calculations,NO,source selection is not a verified signed finance policy,approved accounting definition
+C11,Year-1 exit criteria met in operation,RESEARCHER_QUERY,S5/S6 planned criteria,NO,"plan provides prerequisites, not completion claim",observed criterion closure
+C14,Final plan approved,RESEARCHER_QUERY,S10 says presented for approval,NO,presentation is not signed authorization,signed approval for named source version

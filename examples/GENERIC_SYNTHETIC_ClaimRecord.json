@@ -1,0 +1,33 @@
+{
+  "claim_id": "SYN-001",
+  "question": "Does a declared family total identify one component share?",
+  "origin": "researcher_query",
+  "intended_use": "not_confirmed",
+  "source_scope": {
+    "source_version": "SYNTHETIC v1",
+    "unit": "normalized hypothetical two-service family",
+    "time_boundary": "not a dated company observation",
+    "evidence_role": "demonstration"
+  },
+  "admission": {
+    "status": "admitted",
+    "reason": "algebraic teaching example; not an organizational record"
+  },
+  "finding": {
+    "status": "not_identified",
+    "bounds": [
+      0,
+      1
+    ],
+    "reason": "nonnegative group split with normalized total 1",
+    "witness": "(0.5,0.5) and (0.75,0.25) have identical total"
+  },
+  "needed_evidence": [
+    "A lawful, authorized group-specific allocation restriction could narrow this target in a real case."
+  ],
+  "adjudication": {
+    "reviewed": false,
+    "notes": "No independent review conducted"
+  },
+  "limitations": "Synthetic illustration; no financial outcome or approved commercial policy."
+}

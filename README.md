@@ -69,3 +69,9 @@ without changing that source-code snapshot.
 journal metadata, license, author declarations and rights-clearance remain to
 be confirmed. Repository visibility is not evidence that restricted original
 company data can be redistributed.
+
+## V18 decision-sufficiency extension (source-free)
+
+The research extension adds `src/decision_sufficiency.py`, exact linear target bounds over explicitly declared nonnegative disjoint aggregation groups, robust pairwise score comparisons, and deterministic unit tests. `docs/PORTABLE_CLAIM_PROTOCOL_V1.md` and `schemas/claim_evidence_record_v1.schema.json` specify claim origin, intended use, admission holds and separate finding/value/reason fields. The public `evidence/claim_origin_intended_use_v18.csv` only recodes already reported, de-identified source IDs; it contains no company originals or new monetary amounts.
+
+Human blind application and a genuine dated owner-authorized evidence repair have **not been executed** (see the files with `NOT_EXECUTED` in their titles). Run `python3 run_checks.py` for the expanded source-free suite. The journal submission and release permissions still require author/data-owner review; no license, archive DOI or independent field validation is implied.
