@@ -20,24 +20,24 @@
 \daterevised{}
 \dateaccepted{}
 \datepublished{}
-\Title{Identifiability Before MSSP Portfolio Decisions: A Source-Locked Industrial Audit of Priority Scores, Launch Stages, and Financial Aggregates}
+\Title{Auditing Evidence Sufficiency for MSSP Portfolio Decisions: A Reproducible Protocol and Industrial Case}
 \Author{Muhammad Emran $^{1,*}$ and Ghassan Malkawi $^{1}$}
 \AuthorNames{Muhammad Emran and Ghassan Malkawi}
 \address{$^{1}$ Faculty of Computer Information Science, Higher Colleges of Technology, Al Ain, United Arab Emirates; memran@hct.ac.ae (M.E.); gmalkawi@hct.ac.ae (G.M.)}
 \corres{Correspondence: memran@hct.ac.ae}
-\abstract{Managed security service providers (MSSPs) often plan new offerings through disconnected catalogues, scorecards, schedules, and financial sheets. We examine whether one prospective industrial MSSP roadmap supports service-level decisions claimed from those artifacts. A fixed company archive contained 25 entries; nine selected analytical spreadsheet/PDF files and one contextual approval record were audited using source-typed claim-identifiability and consistency checks. The final documents agree on five focus areas, 25 consolidated packages, and a 12/8/5 year-by-year launch plan. However, the detailed catalogue has 51 capabilities versus a hard-coded 49 summary; all 51 map exactly once to packages, while equal package labels conceal different component statuses. Five-criterion priority scores lack documented weights, so the scorecard alone cannot uniquely recover the narrative's firewall priority. One component is scheduled later than its package, and five additional packages show later maturity signals. Twelve family-year totals constrain 57 service-year revenue unknowns, leaving 45 free dimensions under the declared additive model. Release prerequisites are documented, but completion evidence is not. The study contributes a reproducible, conflict-aware evidence-before-optimization audit and minimum-evidence register, not a new optimization algorithm or evidence of operational failure or realized performance.}
-\keyword{managed security services; service portfolio; evidence sufficiency; decision identifiability; financial identifiability; cybersecurity governance}
+\abstract{Portfolio plans can be internally traceable while remaining insufficient for particular managerial claims. We specify a claim-conditioned audit that distinguishes explicit source assertions from researcher-defined questions, admits records by version and intended scope, and separates parameter identification, target-specific bounds, and decision stability. A frozen prospective managed security service provider (MSSP) planning archive contains 51 detailed capabilities mapped exactly once into 25 consolidated packages. Its 49-service helper and narrative disagree with direct enumeration; the intended count definitions require reconciliation rather than an automatic accusation of operational error. Two packages bearing the same aggregate label give opposite results for a declared component predicate. The five-criterion priority matrix supports Firewall weak dominance over two alternatives under any nonnegative normalized numerical weights, but strictly positive illustrative weights make other areas the top scorer; the company's aggregation rule is undocumented. Under an explicit nonnegative additive financial interpretation, 12 family-year totals constrain 57 service-year unknowns, leaving 45 linear dimensions. Exact target bounds show that complete family sums may remain identified when individual service shares are not. Planned launch labels and exit criteria do not establish completed operations. A source-free executable specification and worked certificates are available, but independent human application, an authorized evidence-repair test and observed performance remain unverified. The contribution is a reproducible, single-case decision-specific evidence audit, not a new optimizer or field-effect estimate.}
+\keyword{managed security services; source evidence; decision sufficiency; partial identification; robust preference; portfolio planning; cybersecurity governance}
 \addhighlights{yes}
 \renewcommand{\addhighlights}{%
 \noindent\textbf{Contribution to systems science}\par
 \begin{itemize}[leftmargin=1.4em,itemsep=1pt,topsep=2pt]
-\item Links source capabilities, consolidated service packages, staged launches, priority scoring, and financial aggregates as a coupled planning-decision system.
-\item Specifies source-consistency and claim-identifiability checks before optimization is justified.
+\item Admits evidence by claim origin, source version, unit, time and intended decision use across a coupled MSSP planning system.
+\item Separates input identification, target-specific bounds and decision stability; unresolved inputs need not invalidate every decision.
 \end{itemize}
 \noindent\textbf{Main findings and implications}\par
 \begin{itemize}[leftmargin=1.4em,itemsep=1pt,topsep=2pt]
-\item All 51 source capabilities map to 25 packages, but equal package labels conceal distinct component states, and prioritization weights are missing.
-\item Twelve family-year totals leave 45 conditional revenue-allocation dimensions unresolved; governance decisions require additional evidence.
+\item All 51 capabilities map to 25 packages; identical package labels mask opposite component predicates and scorecard winners vary with weights.
+\item Twelve family-year totals identify group sums but not arbitrary package shares; a public protocol documents exact bounds and evidence requests.
 \end{itemize}}
 % Override the MDPI submission-template's default left-sidebar copyright line.
 % An author-review copy has not been submitted or licensed under CC BY.
@@ -56,25 +56,25 @@
 }
 
 \section{Introduction}
-Managed security service providers (MSSPs) increasingly package operational, governance, identity, data-security, and human-risk capabilities into recurring service portfolios. This creates a familiar optimization question---which services should be launched, when, and with what resources---but also a logically prior evidence question: \emph{does the planning record identify the facts required by the decision being optimized?}
+Managed security service providers (MSSPs) increasingly package operational, governance, identity, data-security, and human-risk capabilities into recurring service portfolios. This creates a familiar portfolio question---which offerings to launch, when, and under which assumptions---and an accompanying evidence question: \emph{what can the planning record establish for a particular requested decision?}
 
 Service-portfolio research provides structures for representing and evaluating portfolios \cite{Kohlborn2009,Comerio2015}; heterogeneous service-repository integration addresses correspondences and representational conflicts \cite{BatiniComerio2016}; new-service-development research separates service identification, modelling, implementation, and commercialization \cite{LinHsieh2011,MenorRoth2008}; and robust portfolio methods already address incomplete costs and interdependencies \cite{Liesio2008,Tavana2019}. MSSP economics and information-security outsourcing are established topics \cite{GuptaZhdanov2012,Wu2017}. Likewise, sensitivity to criterion weights is established in multi-criteria decision analysis (MCDA) \cite{Maliene2018}. We therefore do not propose a new optimizer, maturity index, or MCDA method.
 
-The narrower problem is that commercial planning artifacts operate at different levels of granularity. A detailed capability may be collapsed into a package; a package may inherit a single status and launch year; five focus areas may receive ordinal score vectors without an explicit aggregation rule; financial forecasts may be available only by family; and key performance indicator (KPI) rows may contain planned targets rather than observations. If these layers are treated as interchangeable, a roadmap can appear quantitatively precise while a service-level claim remains underdetermined.
+The narrower problem is that commercial planning artifacts operate at different levels of granularity. A detailed capability may be collapsed into a package; a package may inherit a single status and launch year; five focus areas may receive ordinal score vectors without an explicit aggregation rule; financial forecasts may be available only by family; and key performance indicator (KPI) rows may contain planned targets rather than observations. If these layers are treated as interchangeable, a roadmap can appear quantitatively precise while an individual service-level claim remains unresolved. Conversely, an unknown component quantity need not alter a decision that is robust across all admissible values.
 
-From a systems perspective, the object of study is the \emph{coupled planning-decision architecture}, not the accuracy of an isolated spreadsheet. Its documented layers link named capabilities to packages, package labels to staged availability, criterion scores to portfolio priorities, and family-level resources and revenue to proposed commercial choices. A cross-layer inference is admissible only when its source unit, timing and evidentiary role survive that transition. This is an analysis of \emph{documented decision dependencies}; it neither models actual operational feedback loops nor measures organizational or cybersecurity performance.
+From a systems perspective, the object of study is the \emph{coupled planning-decision architecture}, not the accuracy of an isolated spreadsheet. Its documented layers link named capabilities to packages, package labels to staged availability, criterion scores to portfolio priorities, and family-level resources and revenue to proposed commercial choices. A cross-layer inference is admissible only when its source unit, timing, intended use and evidentiary role survive that transition. This is an analysis of \emph{documented decision dependencies}; it neither models actual operational feedback loops nor measures organizational or cybersecurity performance.
 
 We examine this problem in a prospective MSSP transformation case. The parent archive contains 25 entries: 23 material entries and two export-error text records. Two pairs of material entries are byte-identical copies, leaving 21 distinct material payloads. Nine selected source files form the quantitative and cross-format audit, while one distinct weekly reflection provides a contextual approval-status check. The source-admission and exclusion summary appears in Appendix~\ref{app:source}; the exact-path audit ledger remains restricted to authorized investigators. These artifacts document successive planning drafts, not repeated company deployments. Draft-2 and Draft-3 do not represent observed before/after performance; they are successive planning versions. Draft-3 is the primary analytical source and contains a 51-capability catalogue, a 25-package consolidation, five focus areas, a three-year roadmap, resource/KPI models, and a five-family financial scenario.
 
 The study asks four research questions:
 \begin{enumerate}[leftmargin=1.5em]
-\item \textbf{RQ1 -- Source and aggregation identifiability.} Does the planning record consistently identify the service universe and preserve the component information required by package-level claims?
-\item \textbf{RQ2 -- Decision-rule and stage identifiability.} Do the prioritization scorecard and launch-year artifacts determine the claimed priority/stage decisions without introducing an unstated rule?
-\item \textbf{RQ3 -- Financial identifiability.} Can family-level forecasts identify service-level revenue or the economic consequence of delaying a package/component?
-\item \textbf{RQ4 -- Operational evidence.} Which launch/readiness claims are supported by planning evidence, and which require observed release, pilot, service-level agreement (SLA), or acceptance records?
+\item \textbf{RQ1 -- Claim and source alignment.} Which claims were actually recorded, which were introduced analytically, and what component information survives capability-to-package aggregation?
+\item \textbf{RQ2 -- Decision-rule stability and stage scope.} Which focus comparisons are invariant under a clearly labelled numerical rule class, which change across admissible diagnostic weights, and what launch-scope distinctions remain unresolved?
+\item \textbf{RQ3 -- Financial target identification.} Under a declared nonnegative additive interpretation, which financial targets are identified or bounded by family totals, and what does not follow about service delay effects?
+\item \textbf{RQ4 -- Operational evidence.} Which planned conditions are source facts, and which claims about achieved release, service-level agreement (SLA) or key performance indicator (KPI) performance require later observed evidence?
 \end{enumerate}
 
-The contribution is a source-locked industrial case and a claim-specific audit workflow with explicit consistency and interpretation gates. Repository reconciliation, claims--arguments--evidence, and partial identification are established prior art; novelty is not asserted for those general principles. The proposed extension is the combination of their decision-relevant tests with verifiable source-to-claim witnesses in one prospective MSSP planning archive, not a demonstrated performance improvement over existing methods. Where two interpretations are both consistent with the supplied evidence but yield different service-level decisions, the appropriate output is not identified, rather than an invented weight, allocation, readiness state, or counterfactual.
+The contributions are (i) a specified evidence-admission and claim-origin protocol with structured outputs, (ii) an industrial demonstration of both resolved and unresolved cross-layer questions through verifiable witnesses, and (iii) exact source-free diagnostics for weight-dependent preferences and financial target bounds, with explicit requests for further evidence. Repository reconciliation, claims--arguments--evidence, robust portfolio methods and partial identification are prior art, not claimed inventions. This paper does not measure an improvement over existing audit practice. Crucially, a missing parameter is not by itself a reason to halt every decision: identification is checked against the \emph{requested target or action}, not merely every entry of a model.
 
 \section{Related Work and Positioning}
 \subsection{Service portfolios, incomplete information, and decision rules}
@@ -87,30 +87,23 @@ Incomplete information is not new to portfolio decision support. Liesi\"o et al.
 Table~\ref{tab:priorwork} positions the contribution as an upstream complement rather than a replacement for established portfolio, MSSP, and quality-assurance methods. The common thread is that prior methods need a decision object---a service, project, cost, score, contract, or measure---whose meaning is sufficiently specified. The present study tests that precondition directly in a multi-artifact industrial roadmap.
 
 \begin{table}[H]
-\centering
-\small
-\caption{Closest prior work and how the present study continues it. The comparison concerns decision scope, not study quality.}
+\centering\footnotesize
+\caption{Closest methodological strands: established work and the distinct bounded operation tested here. No comparative performance is inferred.}
 \label{tab:priorwork}
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.5cm} X X}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{3.35cm} X X}
 \toprule
-Prior study/strand & Established contribution & How the present study builds on it \\
+Established strand & What is already known & Claim-specific operation in this case\\
 \midrule
-Kohlborn et al. (2009) \cite{Kohlborn2009} & Framework for service-portfolio goals, governance, tasks, methods, and enablers. & Adds a pre-decision test: are the service-level facts needed by a portfolio decision actually identified in the planning evidence? \\
-Comerio et al. (2015); Batini and Comerio (2016) \cite{Comerio2015,BatiniComerio2016} & Portfolio repositories, decision metrics, and reconciliation of heterogeneous service descriptions. & Uses existing reconciliation principles as an input integrity check, then tests whether grouped source labels determine a \emph{specified component-level decision predicate}. No new repository-integration method is claimed. \\
-Lin and Hsieh (2011); Menor and Roth (2008) \cite{LinHsieh2011,MenorRoth2008} & Separate service identification/design from implementation and commercialization capabilities. & Turns that distinction into an evidence gate: catalogue inclusion and planned launch are not treated as operational readiness without release/measurement evidence. \\
-Liesi\"o et al. (2008) \cite{Liesio2008} & Robust portfolio choice with incomplete cost information and project interdependencies. & Moves one step upstream by testing whether service-level financial quantities are identifiable before robust optimization or scenario analysis. \\
-Tavana et al. (2019) \cite{Tavana2019} & Multi-criteria/fuzzy portfolio selection in a cybersecurity-industry case. & Audits whether criterion aggregation, weights, and service-level inputs are documented before a numerical ranking is treated as reproducible. \\
-Gupta and Zhdanov (2012); Cezar et al. (2017); Wu et al. (2017) \cite{GuptaZhdanov2012,Cezar2017,Wu2017} & MSSP economics, network structure, outsourcing, contracts, investment, and interdependent risk. & Shifts inside the provider and asks whether its own roadmap identifies the service scope, stage, and economics required for service-level commercial claims. \\
-Powell et al. (2008); Poon et al. (2024) \cite{Powell2008,Poon2024} & Spreadsheet errors and QA are established risks in operational decision support. & Uses spreadsheet defects only when they change evidence lineage or claim admissibility; no new spreadsheet-auditing method is claimed. \\
-Dawson et al. (2026) \cite{Dawson2026} & Cybersecurity decisions are shaped by uncertainty, information asymmetry, and limited empirical guidance. & Provides a concrete source-to-claim audit showing which MSSP roadmap claims are recoverable and which require an additional rule or operational evidence. \\
-GSN/SACM; Mohamad et al. (2021, 2024); Viger et al. (2026) \cite{GSNv3,SACM2023,Mohamad2021,MohamadEvidence2024,Viger2026} & Structured claims--evidence reasoning; empirical evidence-management gaps across six firms; identification of previously undocumented defeaters in a complex assurance case. & Does not invent missing-evidence diagnostics or defeaters. Tests \emph{four typed claim dispositions} against planning records, with explicit witnesses and limits, without asserting security assurance or operational failure. \\
-Manski (2005) \cite{Manski2005} & Identification regions characterize conclusions supported without stronger assumptions. & Uses non-unique service-revenue allocations as a finite algebraic witness, not a population identification result or a new statistical-identification theorem. \\
-
+Service portfolio and service development \cite{Kohlborn2009,Comerio2015,BatiniComerio2016,LinHsieh2011,MenorRoth2008} & Portfolio governance, repository reconciliation and the distinction between service design and execution. & Exact mapping is an integrity control; a package label is tested against a component predicate rather than assumed to prove release.\\
+Robust and multi-criteria portfolio decision support \cite{Liesio2008,Tavana2019,Maliene2018} & Incomplete parameters can be handled within defined admissible sets; ordinal ranking depends on the interpretation of weights. & Distinguishes identified targets, stable pairwise comparisons and ambiguous global leaders; weights are analytical examples only.\\
+MSSP economics and spreadsheet quality \cite{GuptaZhdanov2012,Wu2017,Cezar2017,Powell2008,Poon2024} & Outsourcing and financial incentives are complex; spreadsheet quality-assurance issues are established. & Checks source-to-target financial identification rather than treating draft financial totals as service-level earnings.\\
+Cyber decisions, assurance evidence and source scope \cite{Dawson2026,GSNv3,SACM2023,Mohamad2021,MohamadEvidence2024,Viger2026} & Decision uncertainty, evidence linkage, missing records and defeaters are established subjects. & Adds typed source/unit admission, explicit question origin and a conditional witness; no superiority over assurance review is claimed.\\
+Partial identification \cite{Manski2005} & Under incomplete restrictions, identification is a property of a target and its admissible set. & Provides exact target-bound and decision-sufficiency certificates under stated finite additive assumptions.\\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-These comparisons identify scientific ancestry, \emph{not} empirical superiority to prior methods. In particular, the presence-only contrast in Table~\ref{tab:contrast} is deliberately weaker than a full assurance-case review, OSCAL assessment, or robust portfolio model. Taken together, these studies define the foundation on which the present case builds. Service-portfolio and new-service-development work explains what must be managed; robust and multi-criteria portfolio models explain how choices can be optimized under uncertainty; MSSP research explains economic and sourcing incentives; spreadsheet and security-measurement research explains why evidence quality matters. Our narrower addition is an \emph{evidence-before-optimization} gate: before those methods are used to justify a more granular service decision, test whether the admitted source artifacts actually identify the required input or claim at that granularity.
+These comparisons identify scientific ancestry, \emph{not} empirical superiority to prior methods. In particular, the presence-only contrast in Table~\ref{tab:contrast} is deliberately weaker than a full assurance-case review, OSCAL assessment, or robust portfolio model. Taken together, these studies define the foundation on which the present case builds. Service-portfolio and new-service-development work explains what must be managed; robust and multi-criteria portfolio models explain how choices can be optimized under uncertainty; MSSP research explains economic and sourcing incentives; spreadsheet and security-measurement research explains why evidence quality matters. Our narrower contribution is a \emph{claim-specific sufficiency} test: establish whether a requested target or comparison is determined, bounded, robust to incomplete inputs, or still reliant on a missing authorized rule. Robust optimization can legitimately proceed with nonunique parameters when its decision is shown to remain valid over the admitted set.
 
 \subsection{Assurance arguments and identification sets: the closest methodological precedents}
 Security assurance cases explicitly relate claims, assumptions, arguments, and supporting evidence; the Goal Structuring Notation and OMG Structured Assurance Case Metamodel already formalize this family of reasoning \cite{GSNv3,SACM2023}. A systematic review by Mohamad et al. examines security assurance cases and their practical validation limitations \cite{Mohamad2021}. Subsequent interviews in six safety-critical organizations document the challenges of identifying and managing security evidence \cite{MohamadEvidence2024}; an assurance-case study of the Large Hadron Collider demonstrates that a structured argument can expose previously undocumented defeaters \cite{Viger2026}. These are materially close precedents: neither missing-evidence recognition nor structured rebuttal is novel here. Thus the present paper does \emph{not} claim to invent evidence sufficiency, provenance, or claim--evidence linkage. Its narrower output comprises source-specific, machine-checkable decision dispositions for ranked priorities, launch stages, and service-revenue inferences in one MSSP planning archive.
@@ -124,7 +117,7 @@ OSCAL distinguishes implementation descriptions from assessment results. Its con
 \subsection{Spreadsheet quality assurance and cybersecurity decision uncertainty}
 Spreadsheet faults, testing, and quality assurance are established research areas. Powell et al. review the prevalence and consequences of spreadsheet errors in decision support \cite{Powell2008}, and Poon et al. survey spreadsheet quality assurance across the spreadsheet life cycle \cite{Poon2024}. The present study therefore does not claim novelty for detecting a broken reference, stale helper count, or hard-coded value. Those observations matter only insofar as they alter the evidence available for a cross-artifact service-level claim.
 
-Recent cybersecurity decision-making research likewise emphasizes uncertainty, limited empirical guidance, and information asymmetries in organizational decisions \cite{Dawson2026}. Our case contributes a reproducible source-to-claim test at a specific decision boundary: before a roadmap score, launch year, or financial aggregate is used to support a more granular service decision, can that claim be uniquely recovered from the admitted evidence?
+Recent cybersecurity decision-making research likewise emphasizes uncertainty, limited empirical guidance, and information asymmetries in organizational decisions \cite{Dawson2026}. Our case contributes a reproducible source-to-claim test: can the specific claim be determined, bounded, or used to establish a robust decision with the admitted evidence, and what authorizing observation is needed if it cannot?
 
 \subsection{From established methods to source-testable claims}
 Table~\ref{tab:lineage} identifies the precise audit operation inherited from earlier research, alongside what is actually demonstrated in this case. This distinction is important: a citation to an established method is not evidence that the present work exceeds its accuracy, efficiency, or external validity.
@@ -191,7 +184,33 @@ Draft-2 and Draft-3 change the decision universe. Draft-2 models ten new areas a
 \label{fig:lineage}
 \end{figure}
 
+
+\subsection{Case selection, provenance and observation boundary}
+This is an available, bounded industrial planning archive selected for a detailed source-to-decision case analysis, not as a statistically representative MSSP sample or a case chosen after observing a particular performance outcome. The freeze concerns \emph{documents received for analysis}, not a complete corporate event history: absent approval or release records cannot establish what happened outside the supplied snapshot. The exact document names and financial amounts remain access controlled. The archive establishes document versions and proposed launch dependencies, but the present public material does not verify who authored each planning artifact, whether either manuscript author was involved in producing it, or whether organizational rights holders have approved release of the reported case details. These author-side provenance and publication-permission checks remain open and are not inferred from file hashes.\label{sec:case-provenance}
+
+
 \section{Claim-Identifiability Audit Method}
+
+\subsection{Claim origin and intended-use admission}
+A source-authored planning statement, a researcher-computed source fact, and a researcher-defined question have distinct evidentiary roles. The first two can describe the archive without showing that management ever requested the third. Each new query records its origin, specified unit, business decision if independently confirmed, and what evidence would resolve it. In this case the source narratively prioritizes Firewall and lists Year-1 release prerequisites, but no signed quantitative weight rule or author-approved service-level allocation objective is admitted. \emph{Managerial intended use is therefore unconfirmed} for the researcher-defined tests in Table~\ref{tab:origin}. This distinction prevents diagnosing a company error simply because a stronger analytical query cannot be answered.\label{sec:claim-origin}
+\begin{table}[H]
+\centering\footnotesize
+\caption{Claim-origin and use gate: example questions are not attributed to managers without evidence.}
+\label{tab:origin}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{2.25cm} >{\raggedright\arraybackslash}p{3.00cm} X}
+\toprule
+Observed source statement or calculation & Researcher-defined target & Admission and decision-use boundary\\
+\midrule
+S4 reports a 49 helper; 51 detailed rows are enumerated & Do the labels count exactly the same object? & Apparent discordance. Equivalence of the intended definitions is not established; seek a versioned source dictionary.\\
+S4 records scores; S5/S6 narratively prefer Firewall & Does this matrix uniquely imply Firewall under a declared numerical rule? & A diagnostic rule class, not recorded management weighting; real numerical priority use is unconfirmed.\\
+S4/S9 give component states and package years & Were all components in a Year-1 package launch-eligible? & The strict all-component predicate is introduced for sensitivity; authorized first-release tier is not evidenced.\\
+S4/S6 give family-level financial forecasts & Which package earns a particular portion or should be delayed? & A research query. Allocation and delay economics require owner-approved commercial and counterfactual conditions.\\
+S5/S6 list launch exit criteria; S10 records presentation for approval & Was release achieved or final approval granted? & The source does not assert completion. Dated operational/approval observations are absent from this archive.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
 \subsection{Operational definition}
 Let $E$ be the frozen archive and $R_q$ a claim-specific \emph{admission rule} that fixes the document version, observation time, unit, service granularity, and evidence role. Let $E_q=R_q(E)$ contain only typed constraints legitimately bearing on claim $q$. Then $\mathcal{I}(E_q)$ denotes interpretations satisfying those constraints without silently supplying weights, allocations, or deployment records. We define identification only when the interpretation set is \emph{nonempty}:
 \[
@@ -199,7 +218,7 @@ Let $E$ be the frozen archive and $R_q$ a claim-specific \emph{admission rule} t
 \]
 A contradictory same-scope constraint set with $\mathcal{I}(E_q)=\varnothing$ is flagged \textsc{Source conflict}, \emph{never} identified by vacuous universal quantification. If the set is nonempty but contains two interpretations with $q(i_1)\ne q(i_2)$, the claim is \textsc{Not identified}; the pair is an explicit witness. A uniquely constant value yields \textsc{Identified for the specified claim}, not general business truth. A planning-only record with no required outcome observations receives \textsc{Outcome evidence absent} rather than a negative performance label.
 
-This four-way disposition is a documentary audit convention, not a new statistical identification theorem. For the apparent ``49 versus 51'' discrepancy, the helper count and direct detail-row enumeration are first recorded as discordant source statements. The narrower claim ``the specified Draft-3 worksheet contains 51 detailed capability rows'' is evaluated with an explicit row-enumeration rule. The executable example separately accepts \emph{joint same-scope source assertions} or \emph{alternative admissible interpretations}, rather than using an untyped list for both. Different versions or units are not silently imposed as joint constraints. Absence of implementation evidence never establishes service failure.
+These four reported dispositions follow an \emph{admission gate}: if two source records cannot be verified to describe the same unit, meaning, version and time, mark \textsc{Admission hold} before evaluating conflict. The source's 49-service helper and 51 directly enumerated capability rows are \emph{discordant numbers}, but do not prove contradictory assertions about a common quantity until their intended definitions are reconciled. The narrower statement ``the specified Draft-3 worksheet contains 51 detailed capability rows'' is independently enumerable. \textsc{Source conflict} is reserved for genuinely incompatible \emph{joint same-scope} assertions. The original casebook uses the counterfactual same-scope assumption when demonstrating that state; the example does not settle the company's terminology. A separately recorded absent-outcome reason takes reporting precedence for a query that requires actual observations. An identified answer records the answer itself (including \emph{false}), not merely a positive status. These are audit conventions, not a new mathematical identification theorem.
 
 \subsection{Layer 0: source/version identity}
 We verify the 25-entry parent archive, identify all nine analysis sources and one unique contextual reflection by bytes, document omissions/duplicate copies, separate Draft-2 from Draft-3, and do not treat successive planning versions as longitudinal performance. Within Draft-3 we compare helper/dashboard claims to direct enumeration of the detailed rows and mapping cells. We do not treat presentations of a proposed plan as final management authorization.
@@ -225,6 +244,21 @@ Draft-3 scores five focus areas on five ordinal criteria: strategic fit, market 
 
 For a weighted-sum diagnostic, let $w_k\ge0$ and $\sum_k w_k=1$. If the top-ranked focus area changes across weights in this explicitly \emph{hypothetical} weighted-sum class, the numerical matrix cannot uniquely support the priority decision without a documented choice of rule. This witness does not assume the firm actually adopted weighted sums. This analysis does not challenge the narrative proposal that firewall services lead the Year-1 plan; final management authorization is separately unverified.
 
+
+\subsection{Target-specific and decision-stability certificates}
+Let $\Theta$ denote a nonempty, explicitly admitted set of interpretations, $t(\theta)$ a requested target, and $U(a,\theta)$ the fully specified evaluation function for action $a$. Parameter identification concerns whether $\Theta$ contains one parameter assignment; target identification concerns whether $\{t(\theta):\theta\in\Theta\}$ is a singleton. Both differ from a robust \emph{decision} certificate: action $a$ is weakly preferred to $b$ if
+\[
+\inf_{\theta\in\Theta}\left[U(a,\theta)-U(b,\theta)\right]\geq 0.
+\]
+A target's nonuniqueness does not invalidate this inequality. A real recommendation still requires a source-authorized utility, action set, and feasible assumptions; this paper does not supply those for package deferral or actual commercial deployment.
+
+For the \emph{hypothetical weighted-sum diagnostic only}, with numeric focus-score vectors $s_a,s_b$ and the full simplex $\Delta_5=\{w\geq0,\sum w_k=1\}$,
+\[
+\min_{w\in\Delta_5}w^{\mathsf T}(s_a-s_b)=\min_k(s_{ak}-s_{bk}).
+\]
+Thus weak pairwise preference under \emph{every} such $w$ holds exactly when $s_a$ is componentwise no smaller than $s_b$. This familiar convex-combination identity is a calculation device, not a new MCDA theory or proof that ordinal grades have cardinal utility.
+
+
 \subsection{Layer 3: stage consistency}
 Let $L(p)\in\{1,2,3\}$ be a package's displayed launch year and $y(c)$ the detailed component year. Under the explicit all-components-at-launch convention,
 \[
@@ -239,6 +273,16 @@ Y_{fy}=\sum_{j\in S_{fy}} r_{jfy},\qquad r_{jfy}\ge0.
 \]
 We then compare the number of service-year unknowns to the rank of the aggregation equations and construct distinct positive allocations that reproduce the same family totals. Rank deficiency is conditional on this stated service-year decomposition and does not identify the actual billing contract or avoidable cost.
 
+
+\subsection{Exact financial target bounds under the declared additive model}
+The $12$ family-year equations constrain the \emph{full vector} of $57$ service-year quantities, but a requested linear target can have a narrower answer than the full vector. Index disjoint positive-total family-year groups by $g$ and let $Y_g>0$, $\mathcal F=\{r\geq0:\sum_{j\in g}r_j=Y_g\ \forall g\}$. For a specified linear target $q(r)=c^{\mathsf T}r$, elementary simplex optimization gives the \emph{exact} identification interval
+\[
+\underline q=\sum_g Y_g\min_{j\in g}c_j,\qquad
+\overline q=\sum_g Y_g\max_{j\in g}c_j.
+\]
+Under these constraints $q$ is identified exactly when the two bounds coincide; with positive totals this is equivalent to $c$ being constant within each group, or $c\in\operatorname{row}(A)$. The identifiable examples include a whole family-year total and a singleton group's contribution. An individual component in a multi-service group has range $[0,Y_g]$, not a uniquely determined revenue. For a \emph{separately defined} utility difference $q=U(a)-U(b)$, $\underline q\geq0$ certifies weak preference for $a$ over $b$ in this assumed model; crossing zero with $\underline q<0<\overline q$ leaves this preference unresolved. No source-authorized package-delay utility is available to turn this into an actual company recommendation. These formulas are established linear-programming and linear-algebra facts, implemented and tested on source-free examples, not estimated company service revenues.\label{sec:target-bounds}
+
+
 \subsection{Layer 5: evidence-to-readiness admission}
 Readiness is not inferred from planning status. Importantly, the company's own Draft-3 roadmap defines Year-1 exit criteria: at least three lighthouse clients, a working SLA process, approved monthly reporting, and a tested firewall risk-score model. The 90-day plan also requires catalogue/pricing/responsible--accountable--consulted--informed (RACI) approval, tooling/runbooks, team preparation, and lighthouse pilots before external launch. We therefore test whether the supplied archive contains evidence that these source-authored prerequisites were achieved.
 
@@ -248,11 +292,11 @@ Readiness is not inferred from planning status. Importantly, the company's own D
 \caption{Claim-admissibility matrix. ``Identified'' means the admitted source is sufficient for the stated claim, not that the service is effective.}
 \begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{3.1cm} X >{\raggedright\arraybackslash}p{2.9cm}}
 \toprule
-Claim & Minimum evidence & Case status \\
+Question & Required evidence type & Case-specific finding \\
 \midrule
 Capability-to-package membership & Exact names and mapping & Identified for source membership (51/51) \\
 Final package launch label & Versioned catalogue year & Identified as planned label \\
-Source-wide 49/51 total equivalence & Same-scope, reconciled total definition & Source conflict; 51 detailed rows enumerated \\
+Source-wide 49/51 count equivalence & Confirm the intended count unit in both records & Scope-admission hold; 51 detailed rows enumerated \\
 Numerical top priority from scorecard & Scores plus declared aggregation/weights & \NI{} \\
 Full-scope package availability & Component scope plus authorized maturity/acceptance & \NI{} \\
 Operational readiness & Executed runbook/tooling/pilot/SLA evidence & Outcome evidence absent \\
@@ -272,7 +316,7 @@ These positive controls matter methodologically. The audit does not classify the
 \subsection{The final mapping is complete, but source summaries disagree on its original service count}
 Direct enumeration of Draft-3 yields 51 detailed capabilities: 10 identity and access management/privileged access management (IAM/PAM), 10 governance, risk, and compliance (GRC), 10 data security posture management (DSPM)/privacy, 10 human-risk/artificial intelligence (AI), and 11 firewall capabilities. The final mapping assigns all 51 exact names once to 25 packages; three additional mapping phrases are explanatory elements rather than missing raw services.
 
-Yet the workbook and both 25-service PDFs state that 49 services were consolidated into 25. The discrepancy is not confined to prose. The workbook's helper block hardcodes \texttt{Total Services = 49}; another helper formula is \texttt{COUNTIF(E14:E199,"*Provided*")}, which starts below the first two IAM detail rows. The total helper then points back to the hardcoded 49. Direct detailed-year enumeration is 24/17/10, whereas the helper block displays 21/18/10. These mechanics demonstrate a hard-coded total and a non-exhaustive status-helper range. They do not establish how the 49 figure entered the package PDFs or explain every year-count discrepancy.
+Yet the workbook and both 25-service PDFs state that 49 services were consolidated into 25. Because ``services in the summary and ``detailed capabilities in the enumeration could refer to different intended units, we report a source-count discrepancy and hold a formal same-scope contradiction until the terminology is reconciled. The discrepancy is not confined to prose. The workbook's helper block hardcodes \texttt{Total Services = 49}; another helper formula is \texttt{COUNTIF(E14:E199,"*Provided*")}, which starts below the first two IAM detail rows. The total helper then points back to the hardcoded 49. Direct detailed-year enumeration is 24/17/10, whereas the helper block displays 21/18/10. These mechanics demonstrate a hard-coded total and a non-exhaustive status-helper range. They do not establish how the 49 figure entered the package PDFs or explain every year-count discrepancy.
 
 The same-week Draft-2/Draft-3 evolution reinforces why source locking matters. Draft-2 uses a ten-area, five-market, Year-3-ARR decision object; Draft-3 uses five final focus areas, a four-market financial scope, 25 packages, and cumulative three-year revenue. Differences between the versions cannot be interpreted as observed growth.
 
@@ -325,6 +369,25 @@ For Human Risk,
 \]
 Putting all weight on SOC readiness makes DSPM score 5 versus Firewall 4; putting all weight on market demand makes Human Risk 5 versus Firewall 4. Thus the numeric scorecard alone does not identify a unique top alternative. This is established MCDA sensitivity \cite{Maliene2018}. The final narrative nevertheless explicitly selects Firewall as the Year-1 flagship based on delivery fit and NOC readiness; our result is therefore a reproducibility boundary for the \emph{scorecard}, not a claim that the management choice is invalid.
 
+
+\paragraph{Positive-weight robustness and decision boundary.}
+The score vector for Firewall is $(5,4,5,4,5)$; its nonnegative differences against IAM/PAM and GRC establish \emph{weak} pairwise preference over both under every nonnegative normalized diagnostic weight vector. At corner weights, ties remain possible; this does not make Firewall a necessary \emph{unique} overall leader. The DSPM and Human Risk differences each include one negative coordinate, so that pairwise certificate fails. The strict-positive examples in Table~\ref{tab:positive-weights} establish alternative \emph{unique} winners without assigning zero weight to any criterion. These vectors are transparently chosen counterexamples, not observed preferences or a sample from a presumed weight distribution.
+\begin{table}[H]
+\centering\footnotesize
+\caption{Strictly positive illustrative numerical weights; values are direct arithmetic on the source scores, not an elicited company rule.}
+\label{tab:positive-weights}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{4.0cm} r r X}
+\toprule
+$(w_S,w_D,w_{NOC},w_{SOC},w_F)$ & Firewall & Alternative top score & Top alternative\\
+\midrule
+$(0.10,0.20,0.10,0.50,0.10)$ & 4.30 & 4.40 & DSPM / Data Privacy\\
+$(0.10,0.60,0.05,0.10,0.15)$ & 4.30 & 4.45 & Human Risk / AI Awareness\\
+\bottomrule
+\end{tabularx}
+\end{table}
+These findings distinguish (a) a robust \emph{pairwise} dominance certificate, (b) a nonunique \emph{global} top-ranked focus across an explicitly hypothetical weight class, and (c) the company's separately documented narrative proposal to launch Firewall first. The numeric score vectors were labelled ordinal in the source; interpreting them as cardinal additive contributions is itself an analysis-only assumption. Consequently these cases cannot identify the company's actual managerial preference or disprove the narrative choice.
+
+
 \subsection{One direct stage conflict and five broader maturity signals}
 The detailed capability years are 24/17/10 for Years 1/2/3, while package labels are 12/8/5. Exactly one mapped capability is later than its package: Control Effectiveness Monitoring is Year 2 inside a combined Year-1 GRC package. Under the strict all-components-at-launch convention, only this package moves, producing 11/9/5 (Figure~\ref{fig:stage}; Appendix~\ref{app:stage}).
 
@@ -341,6 +404,26 @@ The roadmap also names advanced scope later for five packages (S08, S21, S22, S2
 The final scenario reports a normalized three-year revenue index of 1.000 across five service families. The amount itself is scenario-conditioned: because no country-level revenue split exists, the workbook applies an editable 12\% allocation for an excluded market, i.e., a 0.88 market factor.
 
 No source record allocates family totals to the 25 packages or individual components. Under the favorable additive decomposition, Year 1 has 12 service-level unknowns and three independent family totals, Year 2 has 20 versus four, and Year 3 has 25 versus five. Across annual decompositions there are 57 unknowns but only 12 independent equations, leaving 45 free dimensions (Figure~\ref{fig:fin}).
+
+
+The $45$ dimensions characterize an \emph{allocation vector}, not every target or comparison. Applying Section~\ref{sec:target-bounds} to a normalized family-year group gives the exact illustrative distinctions in Table~\ref{tab:financial-targets}; no company-specific per-package financial values or customer margins are inferred.
+\begin{table}[H]
+\centering\footnotesize
+\caption{Exact bounds for target questions in a normalized group of total $Y=1$; mathematical illustrations, not observed company allocations.}
+\label{tab:financial-targets}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{4.0cm} c X}
+\toprule
+Target in a two-service group & Identified interval & Interpretation\\
+\midrule
+Family total $r_1+r_2$ & $[1,1]$ & Identified even though individual shares vary\\
+One service $r_1$ & $[0,1]$ & Not identified without another legitimate restriction\\
+Difference $r_1-r_2$ & $[-1,1]$ & Sign and implied preference are unresolved\\
+Singleton-group service $r_1=Y$ & $[1,1]$ & Identified when the source group really has one member\\
+\bottomrule
+\end{tabularx}
+\end{table}
+The target-bound result is positive as well as negative: the family total is sufficient for a \emph{family-total question} even though it is insufficient for an individual service-revenue question. We do not equate a financial share with the commercial advantage of launching or delaying a service, which additionally depends on admissible costs, substitute sales, contracts and timing.
+
 
 For any positive family-year total $Y$ with $k\ge2$ services, both the equal split $Y/k$ and a distinct positive allocation assigning $2Y/3$ to one service and $Y/[3(k-1)]$ to each other service reproduce the same aggregate. For example, in a separate normalized two-service illustration, $(0.5,0.5)$ and $(0.75,0.25)$ both sum to one. These are algebraic witnesses, not company service revenues. With one disjoint equation for each of the 12 positive family-year groups, the block-incidence matrix has rank 12; its 57 columns therefore leave a 45-dimensional nullspace. The assumptions and normalized witness are detailed in Appendix~\ref{app:finance-proof}. A package's revenue share is not identified, and a delay effect would additionally require marginal costs, customer retention and contract timing.
 
@@ -364,27 +447,27 @@ The case does not show that the roadmap is wrong. It shows that different claims
 
 The important distinction is between \emph{portfolio coherence} and \emph{claim identifiability}. The final mapping is complete, the planning narrative explicitly prefers Firewall, and the roadmap anticipates staged maturity; the supplied documents do not certify final management approval. Yet the same evidence does not uniquely answer every service-level counterfactual later asked of it.
 
-\subsection{Why this audit should precede optimization}
-An optimizer can only be as meaningful as its parameters and decision rules. Assigning arbitrary service revenue shares would manufacture financial precision; assigning undocumented criterion weights would manufacture a scorecard ranking; treating later roadmap milestones as hard launch prohibitions would manufacture stage constraints; and interpreting missing acceptance records as failed delivery would manufacture an operational outcome.
+\subsection{When incomplete evidence does and does not constrain a decision}
+An optimization model may be well posed \emph{without} point identification of every input: robust choice can use an admitted uncertainty set and establish that a selected action remains justified over that set. The present archive has no documented service-level commercial utility or approved scorecard weight region with which to certify an actual deferral decision. In its absence, imposing an arbitrary share, score rule or launch interpretation would manufacture a managerially attributed conclusion. The target-level results above show why the prior question is not ``are all parameters known?'' but ``do the admissible facts and stated decision rule justify this \emph{particular} output?'' Missing acceptance records likewise provide no evidence of failure.
 
-To implement the claim gate, each audit record declares (i) the requested claim and unit, (ii) source version/time/provenance, (iii) the constraints actually supported by each admitted artifact, (iv) a separately labelled assumption class if one is examined, (v) either a constant-answer certificate, a contradictory same-scope source pair, an alternative-interpretation witness, or a missing-outcome-evidence reason, and (vi) a minimal new-evidence request. The accompanying machine-readable casebook and tests demonstrate these outputs; they do not automate semantic judgment or make the protocol externally validated.
+To implement the claim gate, each audit record declares (i) the requested claim and unit, (ii) source version/time/provenance, (iii) the constraints actually supported by each admitted artifact, (iv) a separately labelled assumption class if one is examined, (v) either a constant-answer value, target interval, robust-action witness, contradictory admitted same-scope assertions, or an absent-outcome reason, and (vi) an additional-evidence request with a stated authority and effective-scope requirement. The accompanying machine-readable casebook and tests demonstrate these outputs; they do not automate semantic judgment or make the protocol externally validated.
 
-The proposed audit sequence is therefore:
+The proposed decision-specific audit sequence is therefore:
 \begin{enumerate}[leftmargin=1.5em]
-\item lock source versions and decision universe;
-\item prove capability/package traceability;
+\item lock the source versions and distinguish explicit source assertions from analytic queries and unconfirmed intended uses;
+\item validate source identity, unit, scope and capability/package traceability before joint admission;
 \item preserve component semantics when testing aggregate claims;
-\item make the prioritization rule explicit and test weight sensitivity;
+\item declare which numerical rule class is only diagnostic; test weight sensitivity and robust pairwise preference separately;
 \item distinguish nominal launch, minimum viable scope, and full-scope maturity;
-\item test whether financial aggregates identify the requested service-level counterfactual;
-\item require observed release/assessment evidence before promoting planning states to operational readiness.
+\item test exact bounds of the requested financial target; do not equate an allocation with a delay counterfactual;
+\item require observed release/assessment evidence before promoting planning states to operational readiness, and document what authorized record would permit a reassessment.
 \end{enumerate}
-This complements portfolio optimization, MCDA, repository integration, assurance cases, partial identification, OSCAL, and security measurement; it does not replace them. Compared with the six-company evidence-management interview study, this paper offers narrower executable, within-case decision witnesses rather than cross-organization findings. Compared with assurance-case defeater discovery, it checks algebraic uniqueness and admissible planning scope rather than constructing an assurance argument about system safety or security \cite{MohamadEvidence2024,Viger2026}. These case-specific witnesses are logically informative, but they do not constitute a randomized comparison of audit approaches. Each decision test has a concrete witness or missing-evidence disposition, not a numerical ``quality score''.
+This complements portfolio optimization, MCDA, repository integration, assurance cases, partial identification, OSCAL, and security measurement; it does not replace them. Compared with the six-company evidence-management interview study, this paper offers narrower executable, within-case decision witnesses rather than cross-organization findings. Compared with assurance-case defeater discovery, it checks algebraic uniqueness and admissible planning scope rather than constructing an assurance argument about system safety or security \cite{MohamadEvidence2024,Viger2026}. These case-specific witnesses are logically informative, but they do not constitute a randomized comparison of audit approaches. Each admitted test has a specific value, interval, conditional witness or missing-evidence reason, not a numerical ``quality score''. Unadmitted cross-unit assertions are recorded as an admission hold rather than artificially forced into a source conflict.
 
 \subsection{Systems research comparators and the system boundary}
 Recent systems-oriented studies offer particularly informative comparisons. Kocaoglu's purchasing-process roadmapping artifact uses differentiated capability profiles and explicit prioritization to link assessment to planned intervention, supported by expert development and multiple pilot applications \cite{Kocaoglu2026}. The present study does not introduce or externally validate a competing maturity instrument; it checks whether \emph{pre-existing} MSSP package and score records identify the decision at the requested granularity. Plevnik's security-sensitive information-systems service-governance case includes interviews and longitudinal incident data \cite{Plevnik2026}, providing operational evidence that our \emph{planning-only} archive lacks. Fowler et al.'s model-based cyber evaluation toolkit links system threats, proposed controls, and management decisions and includes practitioner face-validity evidence \cite{Fowler2024}; our test concerns source-to-portfolio decision admissibility, not threat-control effectiveness or expert-rated tool utility. Chen et al. distinguish digital traceability from verified evidence and physical compliance in a normative battery-identity governance model \cite{Chen2026}; our narrower counterpart is a deterministic documentary witness that traceable package and financial records can still leave a specified decision non-unique. Thus neither traceability insufficiency nor decision transparency is claimed as a new general principle.
 
-The systems-level contribution here is a bounded account of how \emph{information loss, missing decision rules, inconsistent planning scopes, and absent outcome records} propagate across interdependent stages of one service-portfolio planning system. The claim gate locates the missing evidentiary link and identifies the minimal additional evidence needed before the next managerial inference. It is not a tested intervention, an operational assurance certification, a demonstrated productivity gain, or a multi-organization validation of a systems theory.
+The systems-level contribution here is a bounded account of how \emph{information loss, missing decision rules, inconsistent planning scopes, and absent outcome records} propagate across interdependent stages of one service-portfolio planning system. The claim gate locates the missing evidentiary link, and the target-level certificates also establish where a known family total or robust pairwise score comparison is already sufficient. The evidence-request register identifies records needed for reassessment, but does not prove a mathematically minimum evidence set. It is not a tested intervention, an operational assurance certification, a demonstrated productivity gain, or a multi-organization validation of a systems theory.
 
 \subsection{Case-based contrast with an inventory-only check}
 The case permits a narrow, reproducible ablation of \emph{questions}, not a comparison of auditor accuracy. A minimal document-presence check asks only whether a relevant record or label is present; it does not claim to establish sufficiency. Table~\ref{tab:contrast} shows what the claim-typed protocol additionally resolves when the intended question is made explicit. The examples and comparator were defined from the fixed source set, and no independent expert ground truth, time saving or false-reassurance rate is claimed. Assurance cases and OSCAL already handle claims and supporting evidence; this contrast does not demonstrate superiority over those richer methods \cite{Mohamad2021,OSCALAR2026,OSCALMapping2026}.
@@ -396,7 +479,7 @@ The case permits a narrow, reproducible ablation of \emph{questions}, not a comp
 \toprule
 Question & Document-presence observation & Additional claim-gate finding \\
 \midrule
-51 detailed capabilities? & Row catalogue and 49 helper both present & Source conflict for an undifferentiated total; 51 identified for typed detailed-row enumeration \\
+51 detailed capabilities? & Catalogue and 49 helper/narrative present & 51 directly enumerable; cross-label equivalence held pending definition of ``service versus ``capability \\
 Component-wise predicate from package label? & Provided/Expandable appears on S06 and S07 & Not identified from label: opposite strict predicates \\
 Scorecard's unique top focus? & Five score vectors present & Not identified absent rule; three alternative weight vectors give different winners \\
 Individual package revenue? & Family-year totals present & Not identified: 57 unknowns, rank 12 under stated additive model \\
@@ -405,11 +488,11 @@ Actual Year-1 release? & Launch plan and exit criteria present & Outcome evidenc
 \end{tabularx}
 \end{table}
 
-\subsection{Minimum additional evidence for decision use}
-A negative identification result is actionable only if the next admissible evidence is specified. Table~\ref{tab:minimum} identifies the smallest \emph{type} of additional record needed to revisit each claim; the records would still need version, scope, date and authorization checks before a conclusion is promoted.
+\subsection{Additional evidence required for reassessment}
+A held claim can be revisited only when a relevant additional observation or decision rule has been admitted. Table~\ref{tab:minimum} lists candidate authorized records; it does not establish minimal cardinality, monetary cost, or irreducibility of an evidence set. Every record would still need version, scope, date and authority checks before the output changes.
 \begin{table}[H]
 \centering\footnotesize
-\caption{From non-identified claims to minimum required evidence. This is a due-diligence request register, not proof those records exist.}
+\caption{Additional records required for reassessment of held questions; their existence, authority and formal minimality are unverified.}
 \label{tab:minimum}
 \begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{2.4cm} X X}
 \toprule
@@ -424,8 +507,15 @@ Executive authorization & Signed approval/decision minutes and versioned launch-
 \end{tabularx}
 \end{table}
 
+
+\subsection{Portable protocol, independent interpretation and evidence-repair gates}
+The companion \emph{source-free} repository now includes a claim-origin register, an input/output schema, a stepwise evidence-admission specification, exact algebraic target-bound routines, and deterministic tests. These specify what another analyst would have to examine, but do not themselves check the authority of an organizational document. The separation between a pre-admission \textsc{hold}, a logical result, its value or interval, and the reason for missing operational evidence is crucial for implementers; these fields can be used without changing the underlying archived source values.
+
+A genuinely independent application study remains \textsc{not executed}. It would require permission-cleared matched source excerpts and at least two analysts not involved in developing the casebook, with frozen claims, blind dispositions, adjudication records and transparent denominators for any agreement statistic. A post-snapshot \emph{evidence repair} also remains \textsc{not executed}: an actual authorized dated weight rule, service-tier acceptance record, or approved accounting policy would need to be acquired and independently admitted before rerunning the \emph{same} held question. Merely supplying illustrative weights, running more software unit tests or adding hypothetical finance allocations cannot be described as a validated repair. These are explicit future evaluation gates rather than results of this paper.
+
+
 \subsection{Implications for MSSP governance}
-Three governance implications follow. First, a commercial package label should not substitute for component evidence when the decision is component-sensitive. Second, scorecards should publish the aggregation rule and weight rationale if the numeric ranking is intended to justify a priority decision. Third, the financial model should preserve a documented bridge from family forecast to package price, customer denominator, shared staffing, and avoidable cost if package-level delay economics are to be claimed.
+Three governance implications follow, qualified by whether the intended managerial use has actually been documented. First, a commercial package label should not substitute for component evidence when the decision is component-sensitive. Second, scorecards should publish the aggregation rule and weight rationale if the numeric ranking is intended to justify a priority decision. Third, the financial model should preserve a documented bridge from family forecast to package price, customer denominator, shared staffing, and avoidable cost if package-level delay economics are to be claimed.
 
 The case's NOC/SOC role matrix reinforces the point: responsibility, specialist accountability, service delivery, and customer approval can sit with different actors. A service can therefore be commercially defined before all evidence needed for operational acceptance exists.
 
@@ -434,12 +524,14 @@ This is a single prospective industrial planning case, not a statistical sample 
 
 The weighted-sum scorecard analysis is diagnostic because the source does not specify that weighted summation was its intended aggregation rule. Its purpose is to prove that the raw score matrix alone is insufficient to reproduce a unique top choice, not to recommend alternative weights. The 11/9/5 and 7/11/7 stage schedules are sensitivities, not recommended launch plans. The additive financial decomposition is intentionally favorable to identification and is not claimed to describe billing practice. The 12\% excluded-market adjustment is an explicit planning assumption necessitated by missing country-level revenue splits.
 
-The literature-lineage comparisons are conceptual and source-test linked, not direct replications or empirical head-to-head evaluations of existing portfolio, repository, or security-assurance approaches. In particular, any improvement over a trained auditor, an OSCAL implementation, or a full assurance-case review remains untested. The study confines capability-to-package matching to a source-integrity control, not an evaluation of managed-service obligations, role-level assurance, or security-control compliance; those require a distinct unit of analysis and should not be confused with these decision-identifiability results. Only the limited, de-identified derived-data and executable-code capsule specified in the Data Availability Statement has been released publicly; access to original organizational records remains restricted and requires separate data-owner permission. For this named-author manuscript, the industrial case remains de-identified and financial quantities are normalized; this does not imply double-blind peer review. The protocol has not yet been replicated on a second MSSP portfolio, so cross-company transferability remains a methodological proposition rather than an empirical estimate.
+The literature-lineage comparisons are conceptual and source-test linked, not direct replications or empirical head-to-head evaluations of existing portfolio, repository, or security-assurance approaches. In particular, any improvement over a trained auditor, an OSCAL implementation, or a full assurance-case review remains untested. The study confines capability-to-package matching to a source-integrity control, not an evaluation of managed-service obligations, role-level assurance, or security-control compliance; those require a distinct unit of analysis and should not be confused with these decision-identifiability results. Only the limited, de-identified derived-data and executable-code capsule specified in the Data Availability Statement has been released publicly; access to original organizational records remains restricted and requires separate data-owner permission. For this named-author manuscript, the industrial case remains de-identified and financial quantities are normalized; this does not imply double-blind peer review. The authors' role in creating the original organizational plan, the intended managerial use of the analyst-defined queries, and authorization to disclose the particular industrial case findings have not been independently established from the available public source record. The original authors and data owner must review case provenance, permission and possible competing interests before journal submission. The public tests establish deterministic behavior after evidence admission, not independent semantic agreement. 
+
+The protocol has not yet been replicated on a second MSSP portfolio, so cross-company transferability remains a methodological proposition rather than an empirical estimate.
 
 \section{Conclusion}
 A cybersecurity service roadmap can be internally traceable while failing to identify every decision later asked of it. In this 25-service MSSP case, all 51 detailed capabilities map exactly once to the final packages, but a hard-coded 49-service summary conflicts with their enumeration, package labels compress component semantics, the numerical scorecard lacks a decision rule that uniquely determines the top alternative, one direct component/package timing conflict and several later maturity signals create scope ambiguity, and family-level finance cannot identify service-level economics. The source also specifies launch prerequisites without supplying evidence of their closure.
 
-The practical lesson is evidence-before-optimization. Before ranking, scheduling, or valuing individual services, organizations should establish that the source record identifies the decision at the same granularity. Claim identifiability provides a reproducible way to distinguish a coherent planning portfolio from decision-ready service evidence without converting missing information into false precision or inferred failure.
+The practical lesson is \emph{claim-specific evidence sufficiency}: distinguish what sources say, what an analyst asks, and what a decision actually requires. In this case the complete 51-to-25 mapping and the known family-year totals can answer source-membership and whole-group questions, while aggregate package labels, the undocumented numerical score rule, full-scope launch claims and individual revenues require more qualified interpretations. Exact pairwise score dominance and aggregate financial target bounds also show that nonuniqueness of an input need not imply nonuniqueness of every target or action. These are conditional, reproducible documentary and mathematical certificates within one case, not field validation. Future independent human application and a genuine authorized evidence-repair test are necessary before stronger effectiveness or portability claims.
 
 
 
@@ -448,7 +540,7 @@ The practical lesson is evidence-before-optimization. Before ranking, scheduling
 \funding{\textbf{Author confirmation required before submission.} The presence or absence of research funding, grant support, institutional sponsorship, or article-processing-charge support has not been verified for this manuscript. No funding or no-funding declaration is inferred.}
 \institutionalreview{Not applicable. The study audits archival planning documents and reports no research intervention involving human or animal participants.}
 \informedconsent{Not applicable. No study participants were recruited.}
-\dataavailability{A public source-free reproducibility capsule containing de-identified derived inputs, a claim-decision casebook, deterministic arithmetic and logic checks, software regression tests, and the author-review PDF is available at \url{https://github.com/shaikhamalkawi-ux/mssp-decision-evidence-audit}. The fixed code snapshot is identified by \href{https://github.com/shaikhamalkawi-ux/mssp-decision-evidence-audit/commit/bf29b48d798bc179d69ddd3853e6866a2013011e}{GitHub commit \texttt{bf29b48d79}}. The capsule reproduces the specified derived witnesses and algorithmic semantics, but not the full raw-company-workbook-to-manuscript pipeline or independent operational validation. Original company spreadsheets, reports, absolute financial records, exact source-path ledgers, and owner-controlled original-source replay code remain confidential and are not distributed. Requests for restricted source access require separate approval of the data owner and cannot be guaranteed. A previously executed owner-side checker reproduced 72 selected source-linked assertions, but those original records and checker are not in the public capsule. See Appendices A--D for the evidence and scope boundaries. Public visibility does not establish a license to redistribute the underlying corporate materials.}
+\dataavailability{A public source-free reproducibility capsule containing de-identified derived inputs, a claim-decision casebook, deterministic arithmetic and logic checks, software regression tests, and the author-review PDF is available at \url{https://github.com/shaikhamalkawi-ux/mssp-decision-evidence-audit}. The fixed source-free code and schema snapshot is identified by \href{https://github.com/shaikhamalkawi-ux/mssp-decision-evidence-audit/commit/14be6c6affa0ca163299f325067f7d2b9b42e78e}{GitHub commit \texttt{14be6c6affa0}}; it contains the target-bound/robust-preference routines and reproducibility-scope documentation. The capsule reproduces the selected derived witnesses and algorithmic semantics; its source-free target-bound extension and schema are documented separately. Neither the release nor its unit tests reproduce the full original-workbook-to-manuscript pipeline, settle ambiguous source semantics or provide independent operational validation. Original company spreadsheets, reports, absolute financial records, exact source-path ledgers, and owner-controlled original-source replay code remain confidential and are not distributed. Requests for restricted source access require separate approval of the data owner and cannot be guaranteed. A previously executed owner-side checker reproduced 72 selected source-linked assertions, but those original records and checker are not in the public capsule. See Appendices A--D for the evidence and scope boundaries. Public visibility does not establish a license to redistribute the underlying corporate materials.}
 \acknowledgments{OpenAI ChatGPT (GPT-6) assisted with English-language editing, literature discovery support, LaTeX preparation, code scaffolding, and consistency-check workflows during manuscript preparation. Such assistance does not constitute independent domain-expert validation, a new empirical experiment, or authorship. The human authors retain responsibility for verifying the source evidence, citations, calculations, code, and publication statements. The wording of this disclosure is subject to both authors' final review.}
 \conflictsofinterest{\textbf{Author confirmation required before submission.} Project-specific financial, employment, organizational, and other potentially competing interests have not yet been declared by both authors. A positive declaration or a verified no-conflict statement must replace this notice before submission.}
 \appendixtitles{yes}

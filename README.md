@@ -4,9 +4,9 @@ Public repository: https://github.com/shaikhamalkawi-ux/mssp-decision-evidence-a
 
 Supporting material for the author manuscript:
 
-**Identifiability Before MSSP Portfolio Decisions: A Source-Locked Industrial Audit of Priority Scores, Launch Stages, and Financial Aggregates**
+**Auditing Evidence Sufficiency for MSSP Portfolio Decisions: A Reproducible Protocol and Industrial Case**
 
-Authors: **Muhammad Emran** and **Ghassan Malkawi**. The linked author-review manuscript (V17) is being prepared
+Authors: **Muhammad Emran** and **Ghassan Malkawi**. The linked author-review manuscript (V18) is being prepared
 for *Systems* (MDPI) and is **not yet published or assigned a journal DOI**.
 
 This repository is intended to support examination of the claims in a prospective
@@ -21,8 +21,7 @@ Requires Python 3.10 or newer; standard library only.
 python3 run_checks.py
 ```
 
-Runs deterministic protocol/edge-case unit tests, 14 checks on the limited
-anonymized derived evidence, 18 casebook checks, and a worked claim-gate demo.
+Runs 42 deterministic source-free unit tests, 14 checks on limited anonymized derived evidence, 18 casebook checks, and a worked claim-gate demo; none is an independent company observation.
 
 ## Contents
 
@@ -61,8 +60,8 @@ chosen diagnostic weights, not elicited or company-approved priorities.
 ## Publication and citation
 
 The manuscript PDF is an author-review copy; neither journal acceptance nor a
-DOI is implied. The manuscript Data Availability Statement points to the immutable derived-code
-snapshot commit `bf29b48d798bc179d69ddd3853e6866a2013011e`. The current document file may be updated
+DOI is implied. The V18 manuscript Data Availability Statement points to the immutable source-free code and schema
+snapshot commit `14be6c6affa0ca163299f325067f7d2b9b42e78e`. The current document file may be updated
 without changing that source-code snapshot.
 
 `CITATION.cff` identifies the software material, but final
@@ -75,3 +74,5 @@ company data can be redistributed.
 The research extension adds `src/decision_sufficiency.py`, exact linear target bounds over explicitly declared nonnegative disjoint aggregation groups, robust pairwise score comparisons, and deterministic unit tests. `docs/PORTABLE_CLAIM_PROTOCOL_V1.md` and `schemas/claim_evidence_record_v1.schema.json` specify claim origin, intended use, admission holds and separate finding/value/reason fields. The public `evidence/claim_origin_intended_use_v18.csv` only recodes already reported, de-identified source IDs; it contains no company originals or new monetary amounts.
 
 Human blind application and a genuine dated owner-authorized evidence repair have **not been executed** (see the files with `NOT_EXECUTED` in their titles). Run `python3 run_checks.py` for the expanded source-free suite. The journal submission and release permissions still require author/data-owner review; no license, archive DOI or independent field validation is implied.
+
+**Scope correction:** the historical V8 casebook records a conditional same-scope 49-versus-51 counterexample. The source helper calls 49 `services` and enumeration yields 51 detailed `capabilities`; the V18 claim-origin gate holds cross-term equivalence until an authorized data dictionary reconciles the units. The software demonstration must not be mistaken for a verified same-meaning company contradiction.

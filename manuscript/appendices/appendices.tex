@@ -101,7 +101,7 @@ S07 & Provided; Provided/Expandable & 1 \\
 \bottomrule
 \end{tabularx}
 \end{center}
-No component status was inferred from the aggregate package label. The original source-join script is supplied only in the author-controlled archive; the de-identified vectors and deterministic derived check are in \texttt{evidence/package\_label\_witness\_v8.json} and \texttt{code/check\_casebook\_v8.py}. This establishes information loss for the declared strict predicate, not actual operational performance.
+No component status was inferred from the aggregate package label; the strict predicate is a researcher-defined analysis question, not a company-approved launch condition. The original source-join script is supplied only in the author-controlled archive; the de-identified vectors and deterministic derived check are in \texttt{evidence/package\_label\_witness\_v8.json} and \texttt{code/check\_casebook\_v8.py}. This establishes information loss for the declared strict predicate, not actual operational performance.
 
 
 \subsection{Prioritization sensitivity}\label{app:score}
@@ -115,7 +115,7 @@ The final workbook supplies five score vectors on criteria ordered as strategic 
 \text{Firewall}&=(5,4,5,4,5).
 \end{aligned}
 \]
-No criterion weights or aggregation rule are supplied. Equal-weight means are 4.4, 4.0, 3.8, 3.8 and 4.6 respectively. Firewall weakly dominates IAM/PAM and GRC, but not DSPM or Human Risk.
+No criterion weights or aggregation rule are supplied. The hypothetical numerical interpretation is not an owner-approved use of an ordinal scale. Equal-weight means are 4.4, 4.0, 3.8, 3.8 and 4.6 respectively. Firewall weakly dominates IAM/PAM and GRC, but not DSPM or Human Risk.
 
 For nonnegative weights normalized to sum to one:
 \[
@@ -126,7 +126,7 @@ For nonnegative weights normalized to sum to one:
 \text{Firewall}\ge\text{Human}
 \iff 2w_S+2w_N+w_F\ge w_D.
 \]
-All weight on SOC readiness makes DSPM 5 versus Firewall 4; all weight on market demand makes Human Risk 5 versus Firewall 4. The score matrix alone therefore does not reproduce a unique top focus area. The final narrative separately identifies Firewall as the Year-1 flagship.
+All weight on SOC readiness makes DSPM 5 versus Firewall 4; all weight on market demand makes Human Risk 5 versus Firewall 4. The score matrix alone therefore does not reproduce a unique top focus area. Nevertheless, Firewall weakly dominates IAM/PAM and GRC across all nonnegative normalized diagnostic weights, and strictly positive example weights can make DSPM or Human Risk the unique winner; see Table~\ref{tab:positive-weights}. The final narrative separately identifies Firewall as the Year-1 flagship.
 
 
 \subsection{Stage-consistency diagnostics}\label{app:stage}
@@ -164,7 +164,7 @@ Under the declared additive model, let $n_{fy}\geq1$ count the service-year entr
 \[
  \operatorname{rank}(A)=12,\quad \dim\ker(A)=57-12=45.
 \]
-The rank statement assumes these are the only independent equations and there are no additional observed service tariffs, contractual restrictions or package allocation records. The nonnegative feasible set is not automatically a linear space; ``45 free dimensions'' refers to the rank-nullity structure and, for strictly positive allocations and positive totals, its local feasible dimension.
+The rank statement describes the full allocation vector, not every possible target. Entire family-year totals remain identified, while arbitrary package shares are not. The exact conditional bound formula is in Section~\ref{sec:target-bounds}. The rank statement assumes these are the only independent equations and there are no additional observed service tariffs, contractual restrictions or package allocation records. The nonnegative feasible set is not automatically a linear space; ``45 free dimensions'' refers to the rank-nullity structure and, for strictly positive allocations and positive totals, its local feasible dimension.
 
 For a normalized, two-service illustrative family-year block, the positive vectors
 \[
@@ -202,7 +202,7 @@ Preserved for audit completeness but not used as central claims:
 
 
 \subsection{Claim states and conflict handling}\label{app:claim-states}
-The audit uses a typed claim-admission rule before checking uniqueness. Formally, $\mathcal I(E_q)=\varnothing$ implies \emph{source conflict}, not vacuous identification. For example, the source helper states 49 while direct row enumeration counts 51 under the detailed-row unit: these are reported as discordant claims before taking the direct enumeration as the evidence for the narrower row-count statement. A nonempty set that admits different weighted-sum winners or positive financial allocations yields a claim classified as \emph{not identified}. In contrast, recorded nominal package years and exact mapping are \emph{identified as source facts}, while missing SLA or launch-acceptance records are classified as \emph{outcome evidence absent}. These four dispositions are mutually distinct for each typed claim, and the presence of a plan cannot be counted as an observation of implementation.
+The audit uses a typed claim-admission rule before checking uniqueness. Formally, $\mathcal I(E_q)=\varnothing$ implies \emph{source conflict}, not vacuous identification. For example, the source helper reports 49 services while direct row enumeration counts 51 capabilities: this is a source-count discordance, not necessarily a genuine same-scope logical contradiction. The exact meaning of the source labels requires owner-side reconciliation before the two records may be admitted as jointly asserting an identical quantity. A nonempty set that admits different weighted-sum winners or positive financial allocations yields a claim classified as \emph{not identified}. In contrast, recorded nominal package years and exact mapping are \emph{identified as source facts}, while missing SLA or launch-acceptance records are classified as \emph{outcome evidence absent}. After admission and a specified precedence rule, these four display dispositions are distinct for each typed claim; missing required observations are separately encoded as a reason and a pre-admission scope hold is not classified as a conflict, and the presence of a plan cannot be counted as an observation of implementation.
 
 The executable derived-data examples are contained in \texttt{code/claim\_gate\_demo.py}, \texttt{code/verify\_anonymized.py}, and the independent casebook check \texttt{code/check\_casebook\_v8.py}. This is a derived-data audit, not a distribution of original corporate sheets.
 
@@ -236,5 +236,11 @@ Not included in this gate & The 7/11/7 broad full-scope interpretation, semantic
 
 The author-controlled runner passed 72 mechanically specified checks, including individual revenue, gross-margin and resource-row recomputations; these are not 72 statistically independent case observations. This strengthens reproducibility of the selected mechanical findings, not the paper's external validity. The exact original archive remains restricted. Reproduction at other institutions depends on legitimate authorized access to the source files, which cannot be replaced by the public derived-data package.
 
+
+
+\subsection{Target-specific certificates and claim-origin limitations}\label{app:v18-certificates}
+The decision-sufficiency extension is an analytical audit of the same already published score vectors and of an explicitly abstract additive family-year model. It does not introduce new company results. For the full nonnegative weight simplex, Firewall's weak pairwise advantage over IAM/PAM and GRC follows from componentwise dominance; it is not a guaranteed unique global winner. Positive hypothetical weights produce the DSPM and Human Risk counterexamples given in Table~\ref{tab:positive-weights}. The published ordinal source scores are not certified cardinal utilities.\par
+For disjoint nonnegative allocation groups of positive totals, the bounds in Section~\ref{sec:target-bounds} follow by selecting the smallest/largest coefficient within each simplex block. An intact group total has bounds $[Y_g,Y_g]$, whereas one component of a group containing at least two entries can range from $0$ to $Y_g$ without extra restrictions. The entire 57-component allocation is not identified by the 12 totals; a subset total may still be identified if its membership is a union of complete groups. These mathematical cases should not be read as contractual allocations, financial recommendations or actual earnings.\par
+The V18 source-free public extension includes a structured record schema, explicit claim-origin/intended-use register, and executable finite examples. Protocol-human interpretation and real evidence-repair experiments have \emph{not} been conducted. Every claim origin, source scope, authorizing decision and sharing permission must be supported by source or person-specific evidence before publication as a real governance result.
 
 \endgroup
