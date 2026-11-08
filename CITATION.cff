@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this source-free reproducibility capsule, please cite the associated author manuscript and this software record. A journal DOI has not yet been assigned."
+title: "MSSP Planning Decision Evidence Audit: Source-Free Reproducibility Capsule"
+type: software
+authors:
+  - family-names: Emran
+    given-names: Muhammad
+  - family-names: Malkawi
+    given-names: Ghassan
+version: 0.1.0
+repository-code: https://github.com/shaikhamalkawi-ux/mssp-decision-evidence-audit

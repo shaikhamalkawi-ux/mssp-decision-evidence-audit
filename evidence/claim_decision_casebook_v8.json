@@ -1,0 +1,193 @@
+{
+  "version": "V8",
+  "scope": "one prospective MSSP planning case, not an externally validated classification tool",
+  "decision_states": [
+    "IDENTIFIED_SOURCE_FACT",
+    "SOURCE_CONFLICT",
+    "NOT_IDENTIFIED",
+    "OUTCOME_EVIDENCE_ABSENT"
+  ],
+  "admission_fields": [
+    "claim",
+    "unit_and_scope",
+    "source_version",
+    "time",
+    "source_pointer",
+    "supported_constraints",
+    "assumption_class",
+    "status",
+    "witness_or_missing",
+    "minimum_new_evidence"
+  ],
+  "claims": [
+    {
+      "id": "C2",
+      "claim": "Unique untyped total for the same Draft-3 detailed service universe",
+      "unit_and_scope": "Detailed capability count vs spreadsheet helper count",
+      "source_version": "Draft-3",
+      "time": "planning",
+      "source_pointer": [
+        "S4 detailed rows",
+        "S4 summary helper",
+        "S7 and S8 narrative"
+      ],
+      "supported_constraints": [
+        "51 directly enumerated rows",
+        "49 source-authored hardcoded summary value"
+      ],
+      "assumption_class": "do not conflate a helper/narrative count with typed enumeration",
+      "status": "SOURCE_CONFLICT",
+      "witness_or_missing": "49 versus 51 discordance; narrower typed row enumeration identifies 51",
+      "minimum_new_evidence": "approved reconciled definition/erratum of helper and scope"
+    },
+    {
+      "id": "C3",
+      "claim": "Detailed capabilities all map once to packages",
+      "unit_and_scope": "51 exact names into 25 package names",
+      "source_version": "Draft-3",
+      "time": "planning",
+      "source_pointer": [
+        "S4 detailed capability names",
+        "S9 Consolidation Mapping"
+      ],
+      "supported_constraints": [
+        "51/51 exact once",
+        "three unmatched descriptive mapping phrases"
+      ],
+      "assumption_class": "exact-match name equality at the source snapshot",
+      "status": "IDENTIFIED_SOURCE_FACT",
+      "witness_or_missing": "51 unique source-name matches",
+      "minimum_new_evidence": "not required for source membership; separate service obligation proof not provided"
+    },
+    {
+      "id": "C4",
+      "claim": "Recover strict component predicate from Provided/Expandable package label",
+      "unit_and_scope": "package component statuses",
+      "source_version": "Draft-3",
+      "time": "planning",
+      "source_pointer": [
+        "S4 Areas Services",
+        "S9 Consolidation Mapping rows 10 and 11"
+      ],
+      "supported_constraints": [
+        "S06 has 0 strict value",
+        "S07 has 1",
+        "both identical package label"
+      ],
+      "assumption_class": "g_strict illustrative predicate explicitly declared",
+      "status": "NOT_IDENTIFIED",
+      "witness_or_missing": "S06 and S07 opposite strict values",
+      "minimum_new_evidence": "retain exact component status vector and declared full-scope acceptance rule"
+    },
+    {
+      "id": "C5",
+      "claim": "Unique top focus from scorecard alone",
+      "unit_and_scope": "five alternatives, five ordinal criteria",
+      "source_version": "Draft-3",
+      "time": "planning",
+      "source_pointer": [
+        "S4 Focus Areas"
+      ],
+      "supported_constraints": [
+        "5 by 5 score vector matrix",
+        "no documented aggregation or weights"
+      ],
+      "assumption_class": "diagnostic weighted sum over normalized nonnegative weights, not asserted company rule",
+      "status": "NOT_IDENTIFIED",
+      "witness_or_missing": "Firewall equal weights; DSPM SOC-only; Human Risk demand-only",
+      "minimum_new_evidence": "approved aggregation, weights, tie rule and versioned decision record"
+    },
+    {
+      "id": "C6",
+      "claim": "Packages staged at first full-scope readiness",
+      "unit_and_scope": "package staged year versus component years",
+      "source_version": "Draft-3",
+      "time": "planning",
+      "source_pointer": [
+        "S4 Areas Services",
+        "S9 consolidated packages",
+        "S5 and S6 milestone wording"
+      ],
+      "supported_constraints": [
+        "12/8/5 nominal plan",
+        "one strictly later component",
+        "11/9/5 all-components sensitivity",
+        "7/11/7 broader milestone sensitivity"
+      ],
+      "assumption_class": "all-components-at-launch is illustrative, broad milestone rule even stronger",
+      "status": "NOT_IDENTIFIED",
+      "witness_or_missing": "planned launch vs full-scope maturity semantics diverge",
+      "minimum_new_evidence": "approved service tier, scope and acceptance timestamp"
+    },
+    {
+      "id": "C8",
+      "claim": "Individual service revenue and delay economics from family totals",
+      "unit_and_scope": "57 service-years and 12 family-year totals",
+      "source_version": "Draft-3",
+      "time": "three-year plan",
+      "source_pointer": [
+        "S4 final family finance",
+        "S6 final report"
+      ],
+      "supported_constraints": [
+        "57 service-year unknowns",
+        "12 independent source family-year totals only"
+      ],
+      "assumption_class": "nonnegative additive service-level decomposition as hypothetical favorable case",
+      "status": "NOT_IDENTIFIED",
+      "witness_or_missing": "two normalized positive allocations (0.5,0.5) and (0.75,0.25) with identical total; rank-nullity 57-12=45",
+      "minimum_new_evidence": "per-service price/volume rules plus contracts, attributable costs, schedule and displacement assumptions"
+    },
+    {
+      "id": "C11",
+      "claim": "Operational release achieved",
+      "unit_and_scope": "documented Year-1 release/exit-criteria closure",
+      "source_version": "Draft-3",
+      "time": "after planned launch",
+      "source_pointer": [
+        "S5 and S6 90-day plan and exit criteria"
+      ],
+      "supported_constraints": [
+        "planned acceptance checklist only"
+      ],
+      "assumption_class": "an observation must exist to assert implementation",
+      "status": "OUTCOME_EVIDENCE_ABSENT",
+      "witness_or_missing": "no dated authorization, client acceptance or SLA closeout in admitted archive",
+      "minimum_new_evidence": "dated approvals, signed acceptance, lighthouse/pilot and SLA evidence"
+    },
+    {
+      "id": "C14",
+      "claim": "Executive approval completed",
+      "unit_and_scope": "specific final roadmap document version",
+      "source_version": "Draft-3",
+      "time": "final-week presentation",
+      "source_pointer": [
+        "S10 final weekly reflection"
+      ],
+      "supported_constraints": [
+        "presented to management for approval"
+      ],
+      "assumption_class": "presentation is not authorization",
+      "status": "OUTCOME_EVIDENCE_ABSENT",
+      "witness_or_missing": "signed executive approval not in admitted archive",
+      "minimum_new_evidence": "signed approval or minutes referencing frozen plan version"
+    }
+  ],
+  "comparison_boundary": "document-presence/inventory check is not a calibrated competing audit method; no superiority accuracy claims",
+  "financial_illustrative": {
+    "family_total_normalized": 1.0,
+    "allocation_a": [
+      0.5,
+      0.5
+    ],
+    "allocation_b": [
+      0.75,
+      0.25
+    ],
+    "unknowns_total": 57,
+    "independent_group_totals": 12,
+    "nullspace_dimension": 45
+  },
+  "publication_state": "HOLD for owner permission and author/journal metadata",
+  "editorial_closure": "Four-state ontology and code-input role separation; no scientific result changes."
+}

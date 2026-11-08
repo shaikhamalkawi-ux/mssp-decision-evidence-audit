@@ -1,7 +1,67 @@
-# MSSP Decision Evidence Audit
+# MSSP decision-evidence audit — research reproducibility capsule
 
-This public repository hosts a source-free research reproducibility capsule for an unpublished MSSP planning-decision manuscript by Muhammad Emran and Ghassan Malkawi. It does not contain original corporate Excel/PDF records or confidential absolute financial data.
+Public repository: https://github.com/shaikhamalkawi-ux/mssp-decision-evidence-audit
 
-The reproducibility scope and executable checks are provided alongside derived, de-identified fixtures. Original raw-data replication and operational deployment are not claimed.
+Supporting material for the author manuscript:
 
-This project is not affiliated with MDPI, and the manuscript has not been accepted or assigned a journal DOI.
+**Identifiability Before MSSP Portfolio Decisions: A Source-Locked Industrial Audit of Priority Scores, Launch Stages, and Financial Aggregates**
+
+Authors: **Muhammad Emran** and **Ghassan Malkawi**. The manuscript is being prepared
+for *Systems* (MDPI) and is **not yet published or assigned a journal DOI**.
+
+This repository is intended to support examination of the claims in a prospective
+industrial managed security service provider (MSSP) planning case. It does not
+contain an IDS, intrusion detector or a new portfolio-optimization algorithm.
+
+## Quick start
+
+Requires Python 3.10 or newer; standard library only.
+
+```bash
+python3 run_checks.py
+```
+
+Runs deterministic protocol/edge-case unit tests, 14 checks on the limited
+anonymized derived evidence, 18 casebook checks, and a worked claim-gate demo.
+
+## Contents
+
+- `src/evidence_protocol.py`: small role-typed consistency, uniqueness, score,
+  aggregation, and additive-model functions, with guarded inputs.
+- `tests/test_evidence_protocol.py`: edge cases including empty interpretation
+  sets, mutually inconsistent same-scope assertions, scope mismatch, missing
+  outcome records, weight-dependent rank changes, and nonunique allocations.
+- `code/`: version-frozen deterministic case scripts corresponding to the
+  current author manuscript.
+- `evidence/`: selected de-identified, normalized and source-derived values
+  required by those scripts. No source-by-source proprietary workbook dump.
+- `manuscript/`: an **unpublished author-review PDF**. It is not an MDPI
+  proof and its pagination can change at final production.
+- `docs/REPRODUCIBILITY_SCOPE.md`: exact scope and exclusions of each check.
+
+## Evidence and reporting limits
+
+Original corporate Excel/PDF files, exact source paths, unmasked monetary totals,
+internal data-owner audit logs, and proprietary replay scripts are **not** in
+this repository. The original corporate archive's precise byte fingerprints
+are not made public. These omissions are intentional.
+
+An earlier *owner-side* script reported 72 selected original-spreadsheet checks
+passing. That script and original records are kept in a separate controlled
+record and **cannot** be independently rerun from this public capsule. The
+casebook checks are deterministic checks of released source-derived inputs; they
+are not external validation, implementation tests, or statistical replicates.
+
+The 51-to-25 mapping is source membership, not evidence of delivered services.
+The source-authored "Provided" label is not a readiness certificate. A listed
+launch year is not evidence of achieved launch; missing operational records
+are not proof of implementation failure. The scorecard witnesses use explicitly
+chosen diagnostic weights, not elicited or company-approved priorities.
+
+## Publication and citation
+
+The manuscript PDF is an author-review copy; neither journal acceptance nor a
+DOI is implied. `CITATION.cff` identifies the software material, but final
+journal metadata, license, author declarations and rights-clearance remain to
+be confirmed. Repository visibility is not evidence that restricted original
+company data can be redistributed.

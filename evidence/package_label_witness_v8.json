@@ -1,0 +1,32 @@
+{
+  "source_status": "verified directly against source workbook and mapping, 2026-11-07",
+  "source_pointer": "S9 Consolidation Mapping rows 10 and 11, joined on exact capability names to S4 Areas Services",
+  "public_scope": "blinded, status-only; data owner publication approval still HOLD",
+  "status_label": "Provided / Expandable",
+  "predicate": "true iff every mapped detailed component status is Provided or Provided / Expandable",
+  "cases": [
+    {
+      "package_id": "S06",
+      "component_statuses": [
+        "Provided",
+        "Gap / Opportunity",
+        "Provided / Expandable"
+      ],
+      "strict_value": false
+    },
+    {
+      "package_id": "S07",
+      "component_statuses": [
+        "Provided",
+        "Provided / Expandable"
+      ],
+      "strict_value": true
+    }
+  ],
+  "interpretation": "aggregate label alone cannot determine the strict component-wise predicate",
+  "not_claimed": [
+    "service operated",
+    "service failed",
+    "assurance test of any implemented control"
+  ]
+}

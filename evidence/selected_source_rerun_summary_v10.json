@@ -1,0 +1,64 @@
+{
+  "source_archive_sha256_verified": true,
+  "separately_verified_draft3_workbooks": 2,
+  "core_source_to_result_checks_passed": 72,
+  "all_checks_passed": true,
+  "source_reading": "original XLSX workbooks, no intermediate analyst ledger used",
+  "detailed_capabilities": 51,
+  "mapped_once": 51,
+  "packages": 25,
+  "explanatory_phrases": 3,
+  "capability_year_counts": [
+    24,
+    17,
+    10
+  ],
+  "nominal_package_years": [
+    12,
+    8,
+    5
+  ],
+  "all_components_stage_sensitivity": [
+    11,
+    9,
+    5
+  ],
+  "direct_stage_mismatches": 1,
+  "S06_S07_aggregate_equal": true,
+  "S06_S07_strict_predicate": [
+    false,
+    true
+  ],
+  "scorecard_multiple_winners": 3,
+  "financial_service_year_unknowns": [
+    12,
+    20,
+    25
+  ],
+  "financial_family_year_totals": [
+    3,
+    4,
+    5
+  ],
+  "additive_conditional_free_dimensions": 45,
+  "financial_normalized_ratios": {
+    "gross_margin_before_resources": 0.49298661174047376,
+    "modeled_resource_cost": 0.16553927534875013,
+    "report_selected_net": 0.32744733639172363,
+    "workbook_other_convention": 0.4109437318603127,
+    "between_conventions": 0.08349639546858909,
+    "year_shares": [
+      0.10813594232749743,
+      0.29660144181256437,
+      0.5952626158599382
+    ]
+  },
+  "not_reconstructed": [
+    "7/11/7 broader roadmap interpretation",
+    "semantically coded historical PDF assertions",
+    "no-service-launch-observed inference",
+    "expert independent validation",
+    "organization-wide source-to-article full reproduction"
+  ],
+  "claim_boundary": "selected spreadsheet-to-result core checks; not full raw-to-article verification or outcome validation"
+}

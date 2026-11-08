@@ -1,0 +1,240 @@
+% Integrated editorial appendix. See the main manuscript for claim boundaries.
+% Tables retain the values and source IDs of the previous de-identified supplement.
+\clearpage
+\appendix
+\renewcommand{\thetable}{\Alph{section}\arabic{table}}
+\renewcommand{\theHtable}{appendix.\Alph{section}.\arabic{table}}
+\begingroup
+\small
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{1.8em}
+
+\section{Source archive and version reconciliation}\label{app:source}
+\setcounter{table}{0}
+
+\subsection{Source selection and analytical identity}\label{app:source-register}
+The parent archive was fixed by SHA-256 before analysis. All nine analytical source files matched the internal source manifest byte-for-byte. The register uses de-identified source IDs; full source names remain in the confidential audit ledger.
+
+\small
+\begin{longtable}{p{0.55cm} p{2.2cm} p{2.1cm} p{7.1cm}}
+\caption{De-identified source register and analytical roles.}\label{tab:app-source-register}\\
+\toprule
+ID & Artifact type & SHA-256 prefix & Role / principal audit finding \\
+\midrule
+\endhead
+S1 & Earlier planning workbook & 4baf84570a33 & Earlier 10-area planning universe, five-market scope, Year-3 ARR scenario; internal roadmap/dashboard staging differences. \\
+S2 & Earlier executive deck & 8b389fb63029 & Version context, ten new areas, pilot logic and immediate actions. \\
+S3 & Earlier strategy roadmap & 0ec1fe47ce83 & Earlier customer targets, revenue ranges, dependencies and explicit scenario caveats. \\
+S4 & Final planning workbook & 5efdcb233ffe & Primary quantitative source: 51 capabilities, five focus score vectors, years/statuses, KPI targets, financial/resource formulas and helper logic. \\
+S5 & Final executive deck & 6aa9b25b568a & Final five-focus portfolio, firewall-led launch, exit criteria and 90-day launch actions. \\
+S6 & Final report & 7cfdc29145a9 & Final roadmap/financial narrative, strategic over-promising risk, selected post-resource convention and launch prerequisites. \\
+S7 & Consolidated catalogue PDF & 37cfc76d6bbd & 25 packages, 12/8/5 planned years, aggregate statuses and stale 49-to-25 narrative. \\
+S8 & Mapping PDF & 3e3b7fde7d79 & Mapping display; stale 49 narrative despite 51 exact raw names in mapped strings. \\
+S9 & Consolidation workbook & 1c41612214d7 & Machine-readable 25 packages and mappings; 51/51 raw names once each plus three explanatory phrases. \\
+S10 & Final-week reflection PDF & 654d5f457b & Context-only: plan presented to management for approval; not evidence of executive acceptance or service launch. \\
+\bottomrule
+\end{longtable}
+\small
+
+\paragraph{Entry-level admission.} The immutable parent archive contains 25 entries: 23 material entries and two exporter-error texts. Two pairs of material entries are byte-identical weekly-reflection copies, leaving 21 distinct material payloads. Nine distinct analytical spreadsheet/PDF sources (S1--S9) enter the numerical and cross-format tests; one distinct final-week reflection (S10) enters \emph{only} the approval-status contextual check. Eleven other distinct material payloads were excluded from the numerical analysis as alternate editable representations, weekly context/presentation material, or presentation photographs. These are not extra independent case observations. The restricted entry-level ledger records each of the 25 original paths, its SHA-256, its disposition, and duplicate-of links; no unselected source was silently treated as contradictory numerical evidence.
+
+\paragraph{Approval-status boundary (S10).} The final-week reflection (byte-identity SHA-256 prefix \texttt{654d5f457b}) states that the refined plan was presented to management for approval. A duplicate copy of the same PDF is present in the archive. This supports a proposal/submission-to-management claim, not proof of final approval or actual first-year release. No approval minute or later implementation closure was admitted in the archive.
+
+
+\subsection{Differences between planning versions}\label{app:versions}
+The two versions differ in decision universe, market scope, and financial metric.
+
+\begin{center}
+\captionof{table}{Differences between the earlier and final planning versions.}\label{tab:app-version-diff}
+\begin{tabularx}{\linewidth}{p{3.0cm} X X}
+\toprule
+Dimension & Earlier version & Final version \\
+\midrule
+Portfolio object & 10 new areas plus references to identity and firewall work & 5 final focus areas; 51 detailed capabilities consolidated to 25 packages \\
+Financial scope & Five-market scope & Four-market financial scope \\
+Headline quantity & Year-3 ARR scenarios & Cumulative three-year planning revenue \\
+Roadmap use & Foundation/scale/lead planning & Final five-focus staged implementation \\
+Interpretation & Earlier planning version & Final planning version; not a realized outcome \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The earlier version also contains internal staging differences: Human Risk/AI appears in different years across its dashboard/catalogue and roadmap, and one Year-1 dashboard priority is omitted from the roadmap's Year-1 key-service cell. These are differences between planning versions, not observed delivery failures.
+
+
+\subsection{Cross-format reconciliation controls}\label{app:cross-format}
+Four final-plan features reconcile across the source representations: (1) the same five focus areas and staged Year-1/2/3 logic appear in the workbook, final report, and executive deck; (2) the consolidation workbook and the paired catalogue PDFs agree on 25 packages and the nominal 12/8/5 split; (3) the report-selected financial totals agree with the final excluded-market planning sheet under the selected convention; and (4) the eight KPI trajectories match between workbook and final report. These controls show that the audit isolates claim-specific boundary problems rather than treating every source difference as an error.
+
+
+\subsection{The 49-versus-51 source discrepancy}\label{app:count-conflict}
+Direct enumeration of the final workbook yields 51 capability rows with year counts 24/17/10. The helper block instead displays 49 total services and 21/18/10.
+
+Relevant workbook mechanics:
+\begin{itemize}[leftmargin=1.4em]
+\item the total-services helper is hardcoded at 49;
+\item a status helper uses \texttt{COUNTIF(E14:E199,"*Provided*")}, starting below the first two identity-service detail rows, both labelled Provided;
+\item the displayed total helper points back to the hardcoded 49;
+\item the 21/18/10 year helper values are not linked to the complete detailed-year enumeration.
+\end{itemize}
+These checks establish a non-exhaustive status-helper range and a hard-coded summary of 49. The range omission excludes two Provided-containing rows, but it does not establish the historical origin of the 49 summary, demonstrate an automatic link to the package PDFs, or explain every year-count difference.
+
+
+\section{Capability aggregation, priorities, and stages}\label{app:aggregation}
+\setcounter{table}{0}
+
+\subsection{Mapping and component-status composition}\label{app:mapping-status}
+The 25-package mapping contains 54 semicolon-delimited phrases: 51 exact matches to all 51 detailed capability names, each once, plus three explanatory phrases.
+
+Detailed status counts are 30 Gap/Opportunity, 12 Provided, 8 Provided/Expandable, and 1 Provided/Opportunity. Across packages, 20/25 contain at least one Gap/Opportunity component; 11/25 contain only Gap/Opportunity components; 4/25 have every component in \{Provided, Provided/Expandable\}; and 1/25 has every component exactly Provided. These are documentary compositions, not measured maturity.
+
+
+\subsection{Package-label information-loss witness}\label{app:package-witness}
+Using the exact source-name join from the final detailed capabilities (source S4) to the consolidation mapping (source S9, mapping rows 10--11), two packages share the aggregate label Provided/Expandable:
+\begin{center}
+\captionof{table}{Component-status witness for equal aggregate package labels.}\label{tab:app-witness}
+\begin{tabularx}{\linewidth}{p{1.2cm} X p{2.0cm}}
+\toprule
+Package ID & Source-authored detailed component statuses & $g_{\mathrm{strict}}$ \\
+\midrule
+S06 & Provided; Gap/Opportunity; Provided/Expandable & 0 \\
+S07 & Provided; Provided/Expandable & 1 \\
+\bottomrule
+\end{tabularx}
+\end{center}
+No component status was inferred from the aggregate package label. The original source-join script is supplied only in the author-controlled archive; the de-identified vectors and deterministic derived check are in \texttt{evidence/package\_label\_witness\_v8.json} and \texttt{code/check\_casebook\_v8.py}. This establishes information loss for the declared strict predicate, not actual operational performance.
+
+
+\subsection{Prioritization sensitivity}\label{app:score}
+The final workbook supplies five score vectors on criteria ordered as strategic fit, market demand, NOC readiness, SOC readiness and financial attractiveness:
+\[
+\begin{aligned}
+\text{IAM/PAM}&=(5,4,4,4,5),\\
+\text{DSPM}&=(4,4,3,5,4),\\
+\text{Human Risk}&=(3,5,3,4,4),\\
+\text{GRC}&=(4,3,4,3,5),\\
+\text{Firewall}&=(5,4,5,4,5).
+\end{aligned}
+\]
+No criterion weights or aggregation rule are supplied. Equal-weight means are 4.4, 4.0, 3.8, 3.8 and 4.6 respectively. Firewall weakly dominates IAM/PAM and GRC, but not DSPM or Human Risk.
+
+For nonnegative weights normalized to sum to one:
+\[
+\text{Firewall}\ge\text{DSPM}
+\iff w_S+2w_N+w_F\ge w_{SOC},
+\]
+\[
+\text{Firewall}\ge\text{Human}
+\iff 2w_S+2w_N+w_F\ge w_D.
+\]
+All weight on SOC readiness makes DSPM 5 versus Firewall 4; all weight on market demand makes Human Risk 5 versus Firewall 4. The score matrix alone therefore does not reproduce a unique top focus area. The final narrative separately identifies Firewall as the Year-1 flagship.
+
+
+\subsection{Stage-consistency diagnostics}\label{app:stage}
+Detailed component-year counts are 24/17/10; final package years are 12/8/5. One direct component/package conflict is present. The mechanical all-components-at-launch convention yields 11/9/5.
+
+Five packages contain later-named roadmap milestones. A broader ``later milestone = first full-scope eligibility'' sensitivity yields 7/11/7. This is not an approved schedule and may overstate the meaning of later maturity/expansion entries.
+
+
+\section{Financial identification and release prerequisites}\label{app:financial}
+\setcounter{table}{0}
+
+\subsection{Financial equation counts and normalized reconciliation}\label{app:finance-overview}
+\begin{center}
+\captionof{table}{Conditional degrees of freedom in the additive family-year decomposition.}\label{tab:app-finance}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X r r r r}
+\toprule
+Year & Service-year unknowns & Family totals & Rank & Free dimensions \\
+\midrule
+1 & 12 & 3 & 3 & 9 \\
+2 & 20 & 4 & 4 & 16 \\
+3 & 25 & 5 & 5 & 20 \\
+\midrule
+Total annual decompositions & 57 & 12 & 12 & 45 \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Normalize planned three-year revenue to 1.000. Annual shares are 0.1081, 0.2966 and 0.5953. The final model applies a 0.88 market factor because an excluded market is represented by an editable 12\% allocation in the absence of country-level revenue splits.
+
+Gross margin before resources is 0.4930 of planned revenue and modeled resource cost is 0.1655. The report-selected post-resource convention yields 0.3274; the workbook's alternative service-row convention yields 0.4109. The difference is 0.0835 of planned revenue. Neither quantity is a realized profit observation.
+
+
+\subsection{Rank deficiency and non-unique allocation witness}\label{app:finance-proof}
+Under the declared additive model, let $n_{fy}\geq1$ count the service-year entries inside active family $f$ in year $y$. Stack the 57 unknown nonnegative entries into $\mathbf r$; the 12 source family-year totals are $\mathbf Y=A\mathbf r$ where $A$ has one disjoint indicator row per family-year group. Its rows have non-overlapping nonempty supports and are therefore linearly independent, so
+\[
+ \operatorname{rank}(A)=12,\quad \dim\ker(A)=57-12=45.
+\]
+The rank statement assumes these are the only independent equations and there are no additional observed service tariffs, contractual restrictions or package allocation records. The nonnegative feasible set is not automatically a linear space; ``45 free dimensions'' refers to the rank-nullity structure and, for strictly positive allocations and positive totals, its local feasible dimension.
+
+For a normalized, two-service illustrative family-year block, the positive vectors
+\[
+\mathbf r^{(1)}=(0.50,0.50),\qquad \mathbf r^{(2)}=(0.75,0.25)
+\]
+both produce $Y=1$ but disagree about the revenue of the first service. If an actual family-year contains more services, hold their positive allocations fixed and transfer a small amount between any two positive entries; the same equation still holds. These numbers are \emph{algebraic illustrations}, not disclosed or reconstructed company revenue. A service delay's net cash consequence remains a distinct, stronger estimand requiring customer, tariff, substitution, avoidable-cost and time assumptions. Details and checks are provided in the executable casebook.
+
+
+\subsection{Claim-decision record and inventory-only contrast}\label{app:casebook}
+The locked, de-identified casebook \texttt{evidence/claim\_decision\_casebook\_v8.json} contains machine-readable claim/unit, admission, status, witness and missing-record fields. A document-inventory check can establish that a label, vector, total or plan is present; it cannot, \emph{by itself}, answer every stronger claim. The fixed five-row contrast in Table~\ref{tab:contrast} is a logical scope contrast, not a measured superiority, benchmark precision, time saving or independent-validation result. The companion script checks typed evidence, the package counterexample, three scorecard alternatives, and the normalized financial witness. No proprietary original sheet enters the de-identified package.
+
+
+\subsection{Source-defined release evidence requirements}\label{app:release}
+The final roadmap's Year-1 exit criteria are:
+\begin{enumerate}[leftmargin=1.4em]
+\item at least three lighthouse clients;
+\item SLA process working;
+\item monthly reporting approved;
+\item firewall risk-score model tested.
+\end{enumerate}
+The 90-day plan additionally requires catalogue/service-tier/RACI/pilot-scope approval, runbooks and integration work, training, and lighthouse pilots before external launch. The supplied planning archive contains these requirements but no recorded closure decision for them.
+
+
+\section{Additional audit observations and verification limits}\label{app:reproducibility}
+\setcounter{table}{0}
+
+\subsection{Additional source-document observations}\label{app:minor-observations}
+Preserved for audit completeness but not used as central claims:
+\begin{itemize}[leftmargin=1.4em]
+\item one executive-dashboard cell contains \texttt{COUNTA(\#REF!)};
+\item dashboard client counts point to a legacy financial sheet while revenue/margin text points to the updated-scope sheet; numeric client totals coincide in the inspected version;
+\item the final report contains a one-day cover/prepared-date discrepancy;
+\item one report sentence labels an adjusted-revenue value as a reverse-calculated serviceable-market estimate, while the workbook computes it as adjusted revenue; no alternative market-size conclusion is drawn.
+\end{itemize}
+
+
+\subsection{Claim states and conflict handling}\label{app:claim-states}
+The audit uses a typed claim-admission rule before checking uniqueness. Formally, $\mathcal I(E_q)=\varnothing$ implies \emph{source conflict}, not vacuous identification. For example, the source helper states 49 while direct row enumeration counts 51 under the detailed-row unit: these are reported as discordant claims before taking the direct enumeration as the evidence for the narrower row-count statement. A nonempty set that admits different weighted-sum winners or positive financial allocations yields a claim classified as \emph{not identified}. In contrast, recorded nominal package years and exact mapping are \emph{identified as source facts}, while missing SLA or launch-acceptance records are classified as \emph{outcome evidence absent}. These four dispositions are mutually distinct for each typed claim, and the presence of a plan cannot be counted as an observation of implementation.
+
+The executable derived-data examples are contained in \texttt{code/claim\_gate\_demo.py}, \texttt{code/verify\_anonymized.py}, and the independent casebook check \texttt{code/check\_casebook\_v8.py}. This is a derived-data audit, not a distribution of original corporate sheets.
+
+A separate, source-free regression suite checks 26 deterministic software properties of the typed claim gate, including rejection of cross-version, cross-unit and cross-definition assertions, explicit handling of empty interpretation sets, missing component statuses, tied scores and distinct positive allocations with the same total. These tests verify the declared program semantics on already specified examples. They do not constitute independent validation on 26 companies, new source-data tests or a complete raw-workbook-to-manuscript replay.
+
+
+\subsection{Boundaries of the findings}\label{app:boundaries}
+The study does not treat presentation for approval as final executive authorization and does not assert that any package failed, that all packages operated, that Firewall should be replaced as the strategic priority, that equal weights are the intended scorecard method, that either timing sensitivity is a recommended schedule, or that either post-resource quantity is realized profit. The contribution is the boundary between claims supported by the planning record and claims requiring a decision rule or observed operational evidence.
+
+
+\subsection{Bounded original-workbook source-to-result rerun}\label{app:original-rerun}
+An owner-side checker was implemented separately from the earlier anonymized-derived-data tests and run directly against the immutable original archive. It imports the two relevant Draft-3 XLSX payloads using a spreadsheet parser, joins the raw detailed capability names to the source-authored package mapping, recomputes the declared component-stage predicate and focus-score arithmetic, and recomputes the relevant normalized family-year financial identities. No original corporate workbook is included in the de-identified package.
+
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering\small
+\captionof{table}{Scope and outcome of the selected original-source verification.}\label{tab:app-source-rerun}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{3.25cm} X}
+\toprule
+Original-source gate & Recomputed outcome / scope\\
+\midrule
+Source and membership & Parent archive identity and 25-entry composition; two Draft-3 workbook checksums; 51 unique capability names, 51 exact one-to-one links, 25 packages, three non-matching explanatory strings.\\
+Stage and labels & Detail-year 24/17/10, package-year 12/8/5, one later component, and the 11/9/5 all-components sensitivity; opposite strict predicates for source-anonymized S06/S07 under an equal aggregate label.\\
+Scorecard & Five source score vectors recomputed; equal, SOC-only and demand-only illustrative weights have three different leaders. No weights are represented as the company's adopted rule.\\
+Finance & Annual family revenue and gross-margin arithmetic, modeled resource-cost reconciliation, both post-resource conventions, 57 active package-year unknowns versus 12 positive family-year aggregates, and the conditional 45-dimensional linear nullspace. Only normalized ratios are released.\\
+Not included in this gate & The 7/11/7 broad full-scope interpretation, semantic review of every PDF passage, global absence of operational records, causal claims, expert validation or cross-company replication.\\
+\bottomrule
+\end{tabularx}
+\end{minipage}
+\end{center}
+
+The author-controlled runner passed 72 mechanically specified checks, including individual revenue, gross-margin and resource-row recomputations; these are not 72 statistically independent case observations. This strengthens reproducibility of the selected mechanical findings, not the paper's external validity. The exact original archive remains restricted. Reproduction at other institutions depends on legitimate authorized access to the source files, which cannot be replaced by the public derived-data package.
+
+
+\endgroup

@@ -1,0 +1,195 @@
+{
+  "capabilities": 51,
+  "packages": 25,
+  "mapping_exact_names": 51,
+  "mapping_supplementary_phrases": 3,
+  "narrative_count": 49,
+  "detailed_year_counts": [
+    24,
+    17,
+    10
+  ],
+  "helper_year_counts": [
+    21,
+    18,
+    10
+  ],
+  "package_year_counts": [
+    12,
+    8,
+    5
+  ],
+  "all_components_sensitivity": [
+    11,
+    9,
+    5
+  ],
+  "broad_full_scope_sensitivity": [
+    7,
+    11,
+    7
+  ],
+  "status_counts": {
+    "Gap / Opportunity": 30,
+    "Provided": 12,
+    "Provided / Expandable": 8,
+    "Provided / Opportunity": 1
+  },
+  "packages_with_any_gap": 20,
+  "packages_all_gap": 11,
+  "packages_strict_status_predicate_yes": 4,
+  "packages_all_exact_provided": 1,
+  "direct_component_package_year_mismatches": 1,
+  "scorecards": {
+    "criteria": [
+      "Strategic Fit",
+      "Market Demand",
+      "NOC Readiness",
+      "SOC Readiness",
+      "Financial Attractiveness"
+    ],
+    "vectors": {
+      "Managed IAM & PAM": [
+        5,
+        4,
+        4,
+        4,
+        5
+      ],
+      "DSPM / Data Privacy": [
+        4,
+        4,
+        3,
+        5,
+        4
+      ],
+      "Managed Human Risk and AI Awareness": [
+        3,
+        5,
+        3,
+        4,
+        4
+      ],
+      "Managed GRC, Risk and Compliance-as-a-Service": [
+        4,
+        3,
+        4,
+        3,
+        5
+      ],
+      "Managed Firewall Services": [
+        5,
+        4,
+        5,
+        4,
+        5
+      ]
+    },
+    "equal_weight_means": {
+      "Managed IAM & PAM": 4.4,
+      "DSPM / Data Privacy": 4.0,
+      "Managed Human Risk and AI Awareness": 3.8,
+      "Managed GRC, Risk and Compliance-as-a-Service": 3.8,
+      "Managed Firewall Services": 4.6
+    },
+    "firewall_minus_other": {
+      "Managed IAM & PAM": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "DSPM / Data Privacy": [
+        1,
+        0,
+        2,
+        -1,
+        1
+      ],
+      "Managed Human Risk and AI Awareness": [
+        2,
+        -1,
+        2,
+        0,
+        1
+      ],
+      "Managed GRC, Risk and Compliance-as-a-Service": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    "firewall_weakly_dominates": {
+      "Managed IAM & PAM": true,
+      "DSPM / Data Privacy": false,
+      "Managed Human Risk and AI Awareness": false,
+      "Managed GRC, Risk and Compliance-as-a-Service": true
+    },
+    "conditions": {
+      "firewall_ge_dspm": "w_strategic + 2*w_NOC + w_financial >= w_SOC",
+      "firewall_ge_human": "2*w_strategic + 2*w_NOC + w_financial >= w_demand"
+    },
+    "witnesses": {
+      "all_weight_SOC": "DSPM=5 > Firewall=4",
+      "all_weight_market_demand": "Human Risk=5 > Firewall=4"
+    }
+  },
+  "financial": {
+    "service_year_unknowns": [
+      12,
+      20,
+      25
+    ],
+    "family_totals": [
+      3,
+      4,
+      5
+    ],
+    "free_dimensions": [
+      9,
+      16,
+      20
+    ],
+    "total_unknowns": 57,
+    "total_equations": 12,
+    "total_free_dimensions": 45,
+    "ratios": {
+      "gm_before_resources_pct_revenue": 0.49298661174047376,
+      "resource_cost_pct_revenue": 0.16553927534875013,
+      "report_net_pct_revenue": 0.32744733639172363,
+      "workbook_alt_pct_revenue": 0.4109437318603127,
+      "difference_pct_revenue": 0.08349639546858909,
+      "annual_revenue_shares": [
+        0.10813594232749743,
+        0.29660144181256437,
+        0.5952626158599382
+      ]
+    }
+  },
+  "readiness_evidence": {
+    "year1_exit_criteria": [
+      "at least 3 lighthouse clients",
+      "SLA process working",
+      "monthly reporting approved",
+      "firewall risk score model tested"
+    ],
+    "missing_in_supplied_archive": [
+      "achieved exit-criteria decisions",
+      "signed release acceptance",
+      "observed SLA numerator/denominator",
+      "realized service-level revenue"
+    ]
+  },
+  "spreadsheet_provenance": {
+    "total_services_hardcoded": 49,
+    "provided_helper_formula": "=COUNTIF(E14:E199,\"*Provided*\")",
+    "total_helper_formula": "=B5",
+    "broken_dashboard_formula": "=COUNTA(#REF!)",
+    "excluded_market_factor": 0.88,
+    "excluded_market_allocation": 0.12,
+    "note": "editable allocation because source lacks country-level revenue split"
+  }
+}

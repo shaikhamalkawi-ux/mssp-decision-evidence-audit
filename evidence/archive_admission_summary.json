@@ -1,0 +1,12 @@
+{
+  "zip_entry_count": 25,
+  "material_entries": 23,
+  "export_error_entries": 2,
+  "duplicate_material_payload_pairs": 2,
+  "distinct_material_payloads": 21,
+  "primary_analytical_payloads": 9,
+  "contextual_approval_status_payloads": 1,
+  "other_distinct_material_payloads": 11,
+  "contextual_status_rule": "Presented for approval is not approved; no implementation/launch conclusion",
+  "disclosure_boundary": "Archive identity hashes, byte-level provenance and original corporate records are intentionally omitted from public release."
+}
