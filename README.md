@@ -6,7 +6,7 @@ Supporting material for the author manuscript:
 
 **Auditing Evidence Sufficiency for MSSP Portfolio Decisions: A Reproducible Protocol and Industrial Case**
 
-Authors: **Muhammad Emran** and **Ghassan Malkawi**. The linked author-review manuscript (V18) is being prepared
+Authors: **Muhammad Emran** and **Ghassan Malkawi**. The linked author-review manuscript (V19) is being prepared
 for *Systems* (MDPI) and is **not yet published or assigned a journal DOI**.
 
 This repository is intended to support examination of the claims in a prospective
@@ -76,3 +76,11 @@ The research extension adds `src/decision_sufficiency.py`, exact linear target b
 Human blind application and a genuine dated owner-authorized evidence repair have **not been executed** (see the files with `NOT_EXECUTED` in their titles). Run `python3 run_checks.py` for the expanded source-free suite. The journal submission and release permissions still require author/data-owner review; no license, archive DOI or independent field validation is implied.
 
 **Scope correction:** the historical V8 casebook records a conditional same-scope 49-versus-51 counterexample. The source helper calls 49 `services` and enumeration yields 51 detailed `capabilities`; the V18 claim-origin gate holds cross-term equivalence until an authorized data dictionary reconciles the units. The software demonstration must not be mistaken for a verified same-meaning company contradiction.
+
+## V19 literature-grounded manuscript revision (8 November 2026)
+
+V19 preserves the documented 51-to-25 mapping and all V18 mathematical and case results. Five published references (Hybertson 2018, Liesiö et al. 2007, Greco et al. 2008, Punkka & Salo 2014, and Diemert et al. 2025) clarify scientific precedent for evidence-based systems engineering, robust portfolio preference, conditionality of ordinal numeric scores and human assurance evaluation. The manuscript now contains 36 cited references, with citations in first-appearance order. No new company observations, human study, or observed evidence repair have been added.
+
+The manuscript has been updated at `manuscript/main.tex` and `manuscript/MSSP_Decision_Evidence_MDPI_Author_Review.pdf`. `PUBLIC_SHA256SUMS.txt` now lists exact SHA-256 fingerprints for 33 fixed source-free and manuscript objects (mutable overview metadata excluded). The cited fixed code/schema snapshot remains `14be6c6affa0ca163299f325067f7d2b9b42e78e`.
+
+The coauthor reports that the original material creator agrees to disclosure of de-identified results. A separate author-controlled written scope/roles confirmation is maintained off GitHub; corporate original XLSX/PDF, raw financial amounts and restricted source paths are still excluded. Both authors must finalize CRediT, funding, competing-interest and publication statements before journal submission.
