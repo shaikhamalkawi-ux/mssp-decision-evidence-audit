@@ -1,5 +1,8 @@
 # MSSP decision-evidence audit — reproducibility and source records
 
+> **Editorial update (23 November 2026):** The current *author-review* manuscript is **V36R3P1**. This production cleanup reconciles the public availability of nine source documents in the article and Appendix A–M, improves Appendix L's 11-group comparison table, and removes internal version labels. It does not revise the scientific results or public source files. The full revised article and supplementary material are maintained in the author-controlled review package, not at `manuscript/` in this public repository.
+
+
 > **Current research state (23 November 2026):** MEMRAN **V36R3**, author review only, not journal-submitted. The public repository now contains [nine exact-source Excel/PDF planning files](source_material/README.md), [their SHA-256 manifest](source_material/SOURCE_SHA256SUMS.txt), [the V36R2 AI/documentary scope note](docs/V36R2_AI_EVIDENCE_SCOPE.md), and a [normalized mathematical replay](public_replay/v36r2/verify_linear_claim_class.py). The publication of selected original documents follows the project user's report of rights-holder consent. The *full updated V36R3 article* (literature and result-input provenance synchronized) and *other restricted controlled records* remain in the author's Drive workspace; the manuscript snapshot in this repository is an older **V20** edition, not the current paper.
 
 Supporting material for the author manuscript:
