@@ -8,10 +8,7 @@
 | `tests/test_evidence_protocol.py` | Source-free fixtures | 26 software semantics/regression assertions | 26 independent organizations or experiments |
 | Owner-only replay (not included) | Original corporate ZIP, controlled by owner | Previously reported 72 selected source-to-result checks | A full independent source-to-article reproduction |
 
-The manuscript is a one-organization prospective planning document audit. The
-original company Excel/PDF files, source-exact path ledger, business records,
-financial absolute amounts, original-archive SHA fingerprints, and proprietary
-owner-side replay scripts are intentionally not in this public capsule.
+The manuscript is a one-organization prospective planning document audit. Nine selected **original** company planning Excel/PDF files are now released under [`source_material/`](../source_material/README.md) with byte hashes. Other original-archive objects, the private owner-side replay scripts and audit logs remain excluded. Access to the selected planning documents is not evidence of observed operational business outcomes or complete independent replay.
 
 A reviewer can reproduce the *specified derived calculations* but cannot infer
 business truth, service-level revenue, real implementation, detection efficacy,
