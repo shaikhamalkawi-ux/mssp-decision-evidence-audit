@@ -1,5 +1,8 @@
 # MSSP decision-evidence audit — reproducibility and source records
 
+> **Editorial disclosure correction (23 November 2026):** Current author-review manuscript is **V36R3P2** (22-page article + 33-page supplement). Section 3.1 explicitly distinguishes the nine [public original planning Excel/PDF files](source_material/README.md), which include **financial planning scenario amounts**, from the remaining controlled company archive. Supplementary Table D2 identifies earlier AI checks as **not rerun in the documented execution record**. This is a two-sentence editorial correction only; no scientific data, results, public source files or software code changed. The public `manuscript/` snapshot remains the old V20 edition; the current article is available only in the author-review package.
+
+
 > **Editorial update (23 November 2026):** The current *author-review* manuscript is **V36R3P1**. This production cleanup reconciles the public availability of nine source documents in the article and Appendix A–M, improves Appendix L's 11-group comparison table, and removes internal version labels. It does not revise the scientific results or public source files. The full revised article and supplementary material are maintained in the author-controlled review package, not at `manuscript/` in this public repository.
 
 
