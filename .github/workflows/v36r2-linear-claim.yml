@@ -1,0 +1,28 @@
+name: MEMRAN V36R2 normalized claim test
+
+on:
+  push:
+    paths:
+      - 'public_replay/v36r2/**'
+      - '.github/workflows/v36r2-linear-claim.yml'
+  pull_request:
+    paths:
+      - 'public_replay/v36r2/**'
+      - '.github/workflows/v36r2-linear-claim.yml'
+  workflow_dispatch:
+
+jobs:
+  normalized-claim-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact mathematical test dependencies
+        run: python -m pip install numpy scipy
+      - name: Verify 109 normalized linear claims
+        run: |
+          python public_replay/v36r2/verify_linear_claim_class.py \
+            --groups public_replay/v36r2/DERIVED_GROUP_SIZES_FOR_LINEAR_CLAIM_TEST.csv \
+            --output V36R1_LINEAR_CLAIM_CLASS_QA.json
