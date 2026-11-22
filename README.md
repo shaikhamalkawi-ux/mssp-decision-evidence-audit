@@ -1,6 +1,6 @@
 # MSSP decision-evidence audit — reproducibility and source records
 
-> **Current research state (22 November 2026):** MEMRAN **V36R2**, author review only, not journal-submitted. The public repository now contains [nine exact-source Excel/PDF planning files](source_material/README.md), [their SHA-256 manifest](source_material/SOURCE_SHA256SUMS.txt), [the V36R2 AI/documentary scope note](docs/V36R2_AI_EVIDENCE_SCOPE.md), and a [normalized mathematical replay](public_replay/v36r2/verify_linear_claim_class.py). The publication of selected original documents follows the project user's report of rights-holder consent. The *full updated V36R2 article* and *other restricted controlled records* remain in the author's Drive workspace; the manuscript snapshot in this repository is an older **V20** edition, not the current paper.
+> **Current research state (22 November 2026):** MEMRAN **V36R2P1**, author review only, not journal-submitted. The public repository now contains [nine exact-source Excel/PDF planning files](source_material/README.md), [their SHA-256 manifest](source_material/SOURCE_SHA256SUMS.txt), [the V36R2 AI/documentary scope note](docs/V36R2_AI_EVIDENCE_SCOPE.md), and a [normalized mathematical replay](public_replay/v36r2/verify_linear_claim_class.py). The publication of selected original documents follows the project user's report of rights-holder consent. The *full updated V36R2P1 article* (source-access wording synchronized) and *other restricted controlled records* remain in the author's Drive workspace; the manuscript snapshot in this repository is an older **V20** edition, not the current paper.
 
 Supporting material for the author manuscript:
 
@@ -82,7 +82,7 @@ The manuscript has been updated at `manuscript/main.tex` and `manuscript/MSSP_De
 
 The originating data owner and first author, Muhammad Emran, confirmed consent to the prior de-identified capsule. The project user subsequently confirmed approval to release the **nine selected original planning files**, with exact content preserved and access now provided under `source_material/`. This does not constitute a blanket publication or reuse license for other company materials. Muhammad Emran conducted the industrial planning investigation, data collection and source validation; Ghassan Malkawi developed the analytic methodology and wrote the manuscript. Funding and competing-interest declarations still require truthful author statements before journal submission.
 
-## Current MEMRAN V36R2 source-free addendum (22 November 2026)
+## Current MEMRAN V36R2P1 public-source addendum (22 November 2026)
 
 The current author-review paper focuses on the original industrial planning records and documentary/AI results. This public update adds a **mathematical replay subset and the selected primary Excel/PDF sources**, not the full current author-review PDF or entire original corporate ZIP:
 
@@ -91,4 +91,4 @@ The current author-review paper focuses on the original industrial planning reco
 - The five-output source-bounded AI diagnostic reports 21/32 literal agreement; this is **not a gold-standard accuracy score**. The 42-question documentary comparator and the 16,200 constructed cases are separate experiments.
 - The original material describes prospective **Year 1–3 planning** within Draft 2/Draft 3 Excel/PDF pairs, **not** separate observed yearly performance statements.
 
-**Release boundary:** the nine listed originals are public and remain byte-identical to the source archive. They contain Year 1–3 *planning*, not three realized yearly accounts. Other company records, personal event photographs, duplicate academic submissions and private archive paths have not been released. The V36R2 author-review PDF remains under controlled editorial review. A separately DOI-archived Zenodo release may be appropriate after the repository and licensing metadata are frozen.
+**Release boundary:** the nine listed originals are public and remain byte-identical to the source archive. They contain Year 1–3 *planning*, not three realized yearly accounts. Other company records, personal event photographs, duplicate academic submissions and private archive paths have not been released. The V36R2P1 author-review PDF has been synchronized with this release and remains under controlled editorial review. A separately DOI-archived Zenodo release may be appropriate after the repository and licensing metadata are frozen.
