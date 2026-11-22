@@ -1,6 +1,6 @@
-# MSSP decision-evidence audit — research reproducibility capsule
+# MSSP decision-evidence audit — reproducibility and source records
 
-> **Current research state (22 November 2026):** MEMRAN **V36R2**, author-review only, not submitted to *Systems*. The complete new manuscript, Supplementary Material and restricted reproducibility materials remain under controlled author review. This public GitHub repository still contains an **older V20 author-review manuscript snapshot**; it is **not** a full V36R2 release. The newest **public, source-free subset** contains the [V36R2 evidence and AI-diagnostic scope](docs/V36R2_AI_EVIDENCE_SCOPE.md), [normalized mathematical test](public_replay/v36r2/verify_linear_claim_class.py) and [derived group sizes](public_replay/v36r2/DERIVED_GROUP_SIZES_FOR_LINEAR_CLAIM_TEST.csv). Original company Excel/PDF sources and unredacted yearly planning records are **not public**; no Zenodo deposit has been made.\n\nPublic repository: https://github.com/shaikhamalkawi-ux/mssp-decision-evidence-audit
+> **Current research state (22 November 2026):** MEMRAN **V36R2**, author review only, not journal-submitted. The public repository now contains [nine exact-source Excel/PDF planning files](source_material/README.md), [their SHA-256 manifest](source_material/SOURCE_SHA256SUMS.txt), [the V36R2 AI/documentary scope note](docs/V36R2_AI_EVIDENCE_SCOPE.md), and a [normalized mathematical replay](public_replay/v36r2/verify_linear_claim_class.py). The publication of selected original documents follows the project user's report of rights-holder consent. The *full updated V36R2 article* and *other restricted controlled records* remain in the author's Drive workspace; the manuscript snapshot in this repository is an older **V20** edition, not the current paper.
 
 Supporting material for the author manuscript:
 
@@ -32,18 +32,15 @@ Runs 42 deterministic source-free unit tests, 14 checks on limited anonymized de
   outcome records, weight-dependent rank changes, and nonunique allocations.
 - `code/`: version-frozen deterministic case scripts corresponding to the
   current author manuscript.
-- `evidence/`: selected de-identified, normalized and source-derived values
-  required by those scripts. No source-by-source proprietary workbook dump.
+- `evidence/`: selected de-identified, normalized and source-derived values required by historical scripts.
+- `source_material/`: nine newly released original planning Excel/PDF documents from Draft 2, Draft 3 and consolidation, with their SHA-256 hashes and publication-context notes.
 - `manuscript/`: an **unpublished author-review PDF**. It is not an MDPI
   proof and its pagination can change at final production.
 - `docs/REPRODUCIBILITY_SCOPE.md`: exact scope and exclusions of each check.
 
 ## Evidence and reporting limits
 
-Original corporate Excel/PDF files, exact source paths, unmasked monetary totals,
-internal data-owner audit logs, and proprietary replay scripts are **not** in
-this repository. The original corporate archive's precise byte fingerprints
-are not made public. These omissions are intentional.
+Nine original Excel/PDF planning objects from Draft 2, Draft 3 and the 25-service consolidation are **now publicly available** in [`source_material/`](source_material/README.md), with matching source-object SHA-256 values. They contain company-branded projections, not realized financial statements. The **rest of the original corporate ZIP**, confidential audit logs, restricted original source paths, controlled owner-side replay scripts and other archival files remain outside this repository.
 
 An earlier *owner-side* script reported 72 selected original-spreadsheet checks
 passing. That script and original records are kept in a separate controlled
@@ -83,15 +80,15 @@ V19 preserves the documented 51-to-25 mapping and all V18 mathematical and case 
 
 The manuscript has been updated at `manuscript/main.tex` and `manuscript/MSSP_Decision_Evidence_MDPI_Author_Review.pdf`. `PUBLIC_SHA256SUMS.txt` now lists exact SHA-256 fingerprints for 33 fixed source-free and manuscript objects (mutable overview metadata excluded). The cited fixed code/schema snapshot remains `14be6c6affa0ca163299f325067f7d2b9b42e78e`.
 
-The originating data owner and first author, Muhammad Emran, has confirmed consent to publication of the de-identified findings and public source-free capsule. His contributions include the original practical investigation, source-data collection and audit/validation; Ghassan Malkawi developed the analytical methodology and wrote the manuscript. This consent does not grant general access to confidential company originals; corporate original XLSX/PDF, raw financial amounts and restricted source paths are still excluded. The specified CRediT role division and consent have been updated in V20. Funding and competing-interest declarations still require truthful author statements before journal submission.
+The originating data owner and first author, Muhammad Emran, confirmed consent to the prior de-identified capsule. The project user subsequently confirmed approval to release the **nine selected original planning files**, with exact content preserved and access now provided under `source_material/`. This does not constitute a blanket publication or reuse license for other company materials. Muhammad Emran conducted the industrial planning investigation, data collection and source validation; Ghassan Malkawi developed the analytic methodology and wrote the manuscript. Funding and competing-interest declarations still require truthful author statements before journal submission.
 
 ## Current MEMRAN V36R2 source-free addendum (22 November 2026)
 
-The current author-review paper focuses on the original industrial planning records and documentary/AI results. The **public repository adds only a controlled mathematical reproduction subset**, not the full current author-review PDF or original corporate archive:
+The current author-review paper focuses on the original industrial planning records and documentary/AI results. This public update adds a **mathematical replay subset and the selected primary Excel/PDF sources**, not the full current author-review PDF or entire original corporate ZIP:
 
 - `docs/V36R2_AI_EVIDENCE_SCOPE.md` explains the exact permitted claims, source versions, denominator separation, and reproduction limits.
 - `public_replay/v36r2/verify_linear_claim_class.py` and the paired derived CSV check 109 linear target bounds using normalized, non-proprietary totals (requires NumPy and SciPy).
 - The five-output source-bounded AI diagnostic reports 21/32 literal agreement; this is **not a gold-standard accuracy score**. The 42-question documentary comparator and the 16,200 constructed cases are separate experiments.
 - The original material describes prospective **Year 1–3 planning** within Draft 2/Draft 3 Excel/PDF pairs, **not** separate observed yearly performance statements.
 
-**Release boundary:** no original yearly company workbooks, original reports, restricted financial figures, corporate identities or sensitive source filenames are being uploaded. The current author-review PDF contains declarations requiring verification and remains in the controlled workspace. A DOI-archived Zenodo release is appropriate only after the public files, source rights and final statements are approved and frozen.
+**Release boundary:** the nine listed originals are public and remain byte-identical to the source archive. They contain Year 1–3 *planning*, not three realized yearly accounts. Other company records, personal event photographs, duplicate academic submissions and private archive paths have not been released. The V36R2 author-review PDF remains under controlled editorial review. A separately DOI-archived Zenodo release may be appropriate after the repository and licensing metadata are frozen.
