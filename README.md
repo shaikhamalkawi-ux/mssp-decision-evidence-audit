@@ -1,12 +1,12 @@
 # MSSP decision-evidence audit — research reproducibility capsule
 
-Public repository: https://github.com/shaikhamalkawi-ux/mssp-decision-evidence-audit
+> **Current research state (22 November 2026):** MEMRAN **V36R2**, author-review only, not submitted to *Systems*. The complete new manuscript, Supplementary Material and restricted reproducibility materials remain under controlled author review. This public GitHub repository still contains an **older V20 author-review manuscript snapshot**; it is **not** a full V36R2 release. The newest **public, source-free subset** contains the [V36R2 evidence and AI-diagnostic scope](docs/V36R2_AI_EVIDENCE_SCOPE.md), [normalized mathematical test](public_replay/v36r2/verify_linear_claim_class.py) and [derived group sizes](public_replay/v36r2/DERIVED_GROUP_SIZES_FOR_LINEAR_CLAIM_TEST.csv). Original company Excel/PDF sources and unredacted yearly planning records are **not public**; no Zenodo deposit has been made.\n\nPublic repository: https://github.com/shaikhamalkawi-ux/mssp-decision-evidence-audit
 
 Supporting material for the author manuscript:
 
 **Auditing Evidence Sufficiency for MSSP Portfolio Decisions: A Reproducible Protocol and Industrial Case**
 
-Authors: **Muhammad Emran** and **Ghassan Malkawi**. The linked author-review manuscript (V19) is being prepared
+Authors: **Muhammad Emran** and **Ghassan Malkawi**. The archived public author-review manuscript (V20) is being prepared
 for *Systems* (MDPI) and is **not yet published or assigned a journal DOI**.
 
 This repository is intended to support examination of the claims in a prospective
@@ -73,7 +73,7 @@ company data can be redistributed.
 
 The research extension adds `src/decision_sufficiency.py`, exact linear target bounds over explicitly declared nonnegative disjoint aggregation groups, robust pairwise score comparisons, and deterministic unit tests. `docs/PORTABLE_CLAIM_PROTOCOL_V1.md` and `schemas/claim_evidence_record_v1.schema.json` specify claim origin, intended use, admission holds and separate finding/value/reason fields. The public `evidence/claim_origin_intended_use_v18.csv` only recodes already reported, de-identified source IDs; it contains no company originals or new monetary amounts.
 
-Human blind application and a genuine dated owner-authorized evidence repair have **not been executed** (see the files with `NOT_EXECUTED` in their titles). Run `python3 run_checks.py` for the expanded source-free suite. The journal submission and release permissions still require author/data-owner review; no license, archive DOI or independent field validation is implied.
+Operational-impact evaluation and verified owner-authorized evidence repair are **not established** by these deterministic checks. Run `python3 run_checks.py` for the existing source-free suite. The journal submission and release permissions still require author/data-owner review; no license, archive DOI or independent field validation is implied.
 
 **Scope correction:** the historical V8 casebook records a conditional same-scope 49-versus-51 counterexample. The source helper calls 49 `services` and enumeration yields 51 detailed `capabilities`; the V18 claim-origin gate holds cross-term equivalence until an authorized data dictionary reconciles the units. The software demonstration must not be mistaken for a verified same-meaning company contradiction.
 
@@ -84,3 +84,14 @@ V19 preserves the documented 51-to-25 mapping and all V18 mathematical and case 
 The manuscript has been updated at `manuscript/main.tex` and `manuscript/MSSP_Decision_Evidence_MDPI_Author_Review.pdf`. `PUBLIC_SHA256SUMS.txt` now lists exact SHA-256 fingerprints for 33 fixed source-free and manuscript objects (mutable overview metadata excluded). The cited fixed code/schema snapshot remains `14be6c6affa0ca163299f325067f7d2b9b42e78e`.
 
 The originating data owner and first author, Muhammad Emran, has confirmed consent to publication of the de-identified findings and public source-free capsule. His contributions include the original practical investigation, source-data collection and audit/validation; Ghassan Malkawi developed the analytical methodology and wrote the manuscript. This consent does not grant general access to confidential company originals; corporate original XLSX/PDF, raw financial amounts and restricted source paths are still excluded. The specified CRediT role division and consent have been updated in V20. Funding and competing-interest declarations still require truthful author statements before journal submission.
+
+## Current MEMRAN V36R2 source-free addendum (22 November 2026)
+
+The current author-review paper focuses on the original industrial planning records and documentary/AI results. The **public repository adds only a controlled mathematical reproduction subset**, not the full current author-review PDF or original corporate archive:
+
+- `docs/V36R2_AI_EVIDENCE_SCOPE.md` explains the exact permitted claims, source versions, denominator separation, and reproduction limits.
+- `public_replay/v36r2/verify_linear_claim_class.py` and the paired derived CSV check 109 linear target bounds using normalized, non-proprietary totals (requires NumPy and SciPy).
+- The five-output source-bounded AI diagnostic reports 21/32 literal agreement; this is **not a gold-standard accuracy score**. The 42-question documentary comparator and the 16,200 constructed cases are separate experiments.
+- The original material describes prospective **Year 1–3 planning** within Draft 2/Draft 3 Excel/PDF pairs, **not** separate observed yearly performance statements.
+
+**Release boundary:** no original yearly company workbooks, original reports, restricted financial figures, corporate identities or sensitive source filenames are being uploaded. The current author-review PDF contains declarations requiring verification and remains in the controlled workspace. A DOI-archived Zenodo release is appropriate only after the public files, source rights and final statements are approved and frozen.
